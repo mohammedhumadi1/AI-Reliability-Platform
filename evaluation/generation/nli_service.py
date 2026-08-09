@@ -19,8 +19,18 @@ class NLIResult:
     label: str
 
 
+def get_device() -> torch.device:
+    return torch.device(
+        "cuda"
+        if torch.cuda.is_available()
+        else "cpu"
+    )
+
+
 @lru_cache(maxsize=1)
 def _load_nli_model():
+    device = get_device()
+
     tokenizer = AutoTokenizer.from_pretrained(
         MODEL_NAME
     )
@@ -32,9 +42,10 @@ def _load_nli_model():
         )
     )
 
+    model.to(device)
     model.eval()
 
-    return tokenizer, model
+    return tokenizer, model, device
 
 
 def _result_from_probabilities(
@@ -130,7 +141,9 @@ def evaluate_nli_batch(
             )
         )
 
-    tokenizer, model = _load_nli_model()
+    tokenizer, model, device = (
+        _load_nli_model()
+    )
 
     results = []
 
@@ -162,7 +175,13 @@ def evaluate_nli_batch(
             max_length=512,
         )
 
-        with torch.no_grad():
+        inputs = {
+            key: value.to(device)
+            for key, value
+            in inputs.items()
+        }
+
+        with torch.inference_mode():
             logits = model(
                 **inputs
             ).logits
@@ -170,7 +189,7 @@ def evaluate_nli_batch(
         probabilities = torch.softmax(
             logits,
             dim=-1,
-        )
+        ).cpu()
 
         for row in probabilities:
             results.append(
