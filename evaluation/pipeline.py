@@ -93,7 +93,7 @@ class EvaluationPipeline:
         faithfulness = (
             self.faithfulness_evaluator.evaluate(
                 answer=clean_answer,
-                combined_context=combined_context,
+                contexts=clean_contexts,
             )
         )
 
