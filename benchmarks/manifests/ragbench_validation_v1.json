@@ -1,0 +1,3577 @@
+{
+  "benchmark_version": "ragbench-validation-v1",
+  "dataset": "galileo-ai/ragbench",
+  "split": "validation",
+  "base_seed": 20260821,
+  "selection_strategy": "Equal-domain balanced sampling: 25 supported and 25 unsupported per subset.",
+  "subset_count": 10,
+  "sample_count": 500,
+  "supported_count": 250,
+  "unsupported_count": 250,
+  "subsets": [
+    "covidqa",
+    "cuad",
+    "expertqa",
+    "finqa",
+    "hagrid",
+    "hotpotqa",
+    "msmarco",
+    "pubmedqa",
+    "tatqa",
+    "techqa"
+  ],
+  "summary": {
+    "covidqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "cuad": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "expertqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "finqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "hagrid": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "hotpotqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "msmarco": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "pubmedqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "tatqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    },
+    "techqa": {
+      "total": 50,
+      "supported": 25,
+      "unsupported": 25
+    }
+  },
+  "samples": [
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 1,
+      "sample_id": "1273",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 2,
+      "sample_id": "1667",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 5,
+      "sample_id": "1177",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 13,
+      "sample_id": "689",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 18,
+      "sample_id": "73",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 20,
+      "sample_id": "1525",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 22,
+      "sample_id": "138",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 24,
+      "sample_id": "1550",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 28,
+      "sample_id": "201",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 35,
+      "sample_id": "1363",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 40,
+      "sample_id": "493",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 47,
+      "sample_id": "1437",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 50,
+      "sample_id": "511",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 58,
+      "sample_id": "1586",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 77,
+      "sample_id": "291",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 86,
+      "sample_id": "703",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 94,
+      "sample_id": "614",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 98,
+      "sample_id": "1619",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 115,
+      "sample_id": "373",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 135,
+      "sample_id": "1442",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 140,
+      "sample_id": "1054",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 144,
+      "sample_id": "411",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 148,
+      "sample_id": "12",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 151,
+      "sample_id": "954",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 157,
+      "sample_id": "1073",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 160,
+      "sample_id": "821",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 161,
+      "sample_id": "1566",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 164,
+      "sample_id": "456",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 172,
+      "sample_id": "1675",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 173,
+      "sample_id": "408",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 175,
+      "sample_id": "17",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 179,
+      "sample_id": "194",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 180,
+      "sample_id": "505",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 192,
+      "sample_id": "796",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 197,
+      "sample_id": "1331",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 201,
+      "sample_id": "1654",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 210,
+      "sample_id": "659",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 212,
+      "sample_id": "1269",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 225,
+      "sample_id": "1253",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 234,
+      "sample_id": "71",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 238,
+      "sample_id": "996",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 241,
+      "sample_id": "1701",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 247,
+      "sample_id": "755",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 249,
+      "sample_id": "262",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 252,
+      "sample_id": "603",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 259,
+      "sample_id": "1233",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 262,
+      "sample_id": "1730",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 263,
+      "sample_id": "1554",
+      "supported": true
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 264,
+      "sample_id": "22",
+      "supported": false
+    },
+    {
+      "subset": "covidqa",
+      "split": "validation",
+      "row_index": 265,
+      "sample_id": "1211",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 0,
+      "sample_id": "TELKOMSALTD_01_30_2003-EX-10-LICENCE AND MAINTENANCE AGREEMENT__Most Favored Nation",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 10,
+      "sample_id": "LiquidmetalTechnologiesInc_20200205_8-K_EX-10.1_11968198_EX-10.1_Development Agreement__Uncapped Liability",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 12,
+      "sample_id": "SPOKHOLDINGS,INC_06_19_2020-EX-10.1-COOPERATION AGREEMENT__Cap On Liability",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 21,
+      "sample_id": "INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE HOSTING AGREEMENT__Change Of Control",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 35,
+      "sample_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement__Change Of Control",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 50,
+      "sample_id": "XENCORINC_10_25_2013-EX-10.24-COLLABORATION AGREEMENT (3)__Non-Transferable License",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 62,
+      "sample_id": "BONTONSTORESINC_04_20_2018-EX-99.3-AGENCY AGREEMENT__No-Solicit Of Customers",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 82,
+      "sample_id": "TRIZETTOGROUPINC_08_18_1999-EX-10.17-TECHNICAL INFRASTRUCTURE MAINTENANCE AGREEMENT__Volume Restriction",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 93,
+      "sample_id": "TubeMediaCorp_20060310_8-K_EX-10.1_513921_EX-10.1_Affiliate Agreement__Change Of Control",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 103,
+      "sample_id": "ANIXABIOSCIENCESINC_06_09_2020-EX-10.1-COLLABORATION AGREEMENT__Liquidated Damages",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 115,
+      "sample_id": "DIVERSINETCORP_03_01_2012-EX-4-RESELLER AGREEMENT__Non-Transferable License",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 116,
+      "sample_id": "NmfSlfIInc_20200115_10-12GA_EX-10.5_11946987_EX-10.5_Trademark License Agreement__Revenue/Profit Sharing",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 120,
+      "sample_id": "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT__Affiliate License-Licensor",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 128,
+      "sample_id": "FEDERATEDGOVERNMENTINCOMESECURITIESINC_04_28_2020-EX-99.SERV AGREE-SERVICES AGREEMENT_AMENDMENT__Irrevocable Or Perpetual License",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 136,
+      "sample_id": "INKTOMICORP_06_08_1998-EX-10.14-SOFTWARE HOSTING AGREEMENT__Cap On Liability",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 138,
+      "sample_id": "ScansourceInc_20190822_10-K_EX-10.38_11793958_EX-10.38_Distributor Agreement1__Source Code Escrow",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 145,
+      "sample_id": "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement__Exclusivity",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 149,
+      "sample_id": "AlliedEsportsEntertainmentInc_20190815_8-K_EX-10.19_11788293_EX-10.19_Content License Agreement__Expiration Date",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 150,
+      "sample_id": "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement__Covenant Not To Sue",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 162,
+      "sample_id": "CHAPARRALRESOURCESINC_03_30_2000-EX-10.66-TRANSPORTATION CONTRACT__Non-Disparagement",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 168,
+      "sample_id": "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT__Joint Ip Ownership",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 186,
+      "sample_id": "FIBROGENINC_10_01_2014-EX-10.11-COLLABORATION AGREEMENT__Warranty Duration",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 202,
+      "sample_id": "VAPOTHERM, INC. - Manufacturing and Supply Agreement__Minimum Commitment",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 233,
+      "sample_id": "TRIZETTOGROUPINC_08_18_1999-EX-10.17-TECHNICAL INFRASTRUCTURE MAINTENANCE AGREEMENT__Non-Compete",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 252,
+      "sample_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2__Termination For Convenience",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 258,
+      "sample_id": "ATMOSENERGYCORP_11_22_2002-EX-10.17-TRANSPORTATION SERVICE AGREEMENT__Affiliate License-Licensee",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 260,
+      "sample_id": "ClickstreamCorp_20200330_1-A_EX1A-6 MAT CTRCT_12089935_EX1A-6 MAT CTRCT_Development Agreement__Irrevocable Or Perpetual License",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 303,
+      "sample_id": "THERAVANCEBIOPHARMA,INC_05_08_2020-EX-10.2-SERVICE AGREEMENT__No-Solicit Of Customers",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 304,
+      "sample_id": "RISEEDUCATIONCAYMANLTD_04_17_2020-EX-4.23-SERVICE AGREEMENT__Anti-Assignment",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 307,
+      "sample_id": "ATENTOSA_07_06_2020-EX-99.1-JOINT FILING AGREEMENT__Audit Rights",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 314,
+      "sample_id": "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT__Uncapped Liability",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 318,
+      "sample_id": "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT__Renewal Term",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 321,
+      "sample_id": "VERSOTECHNOLOGIESINC_12_28_2007-EX-99.3-INTELLECTUAL PROPERTY AGREEMENT__Anti-Assignment",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 324,
+      "sample_id": "FreezeTagInc_20180411_8-K_EX-10.1_11139603_EX-10.1_Sponsorship Agreement__Governing Law",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 327,
+      "sample_id": "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement__Non-Transferable License",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 363,
+      "sample_id": "ReynoldsConsumerProductsInc_20200121_S-1A_EX-10.22_11948918_EX-10.22_Service Agreement__Warranty Duration",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 369,
+      "sample_id": "TELKOMSALTD_01_30_2003-EX-10-LICENCE AND MAINTENANCE AGREEMENT__Third Party Beneficiary",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 383,
+      "sample_id": "OLDAPIWIND-DOWNLTD_01_08_2016-EX-1.3-AGENCY AGREEMENT2__Insurance",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 392,
+      "sample_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part1__Third Party Beneficiary",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 399,
+      "sample_id": "ElPolloLocoHoldingsInc_20200306_10-K_EX-10.16_12041700_EX-10.16_Development Agreement__Third Party Beneficiary",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 430,
+      "sample_id": "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY AGREEMENT , 2009__Renewal Term",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 431,
+      "sample_id": "MJBIOTECH,INC_12_06_2018-EX-99.01-JOINT VENTURE AGREEMENT__Minimum Commitment",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 438,
+      "sample_id": "BellringBrandsInc_20190920_S-1_EX-10.12_11817081_EX-10.12_Manufacturing Agreement1__Unlimited/All-You-Can-Eat-License",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 458,
+      "sample_id": "KUBIENT,INC_07_02_2020-EX-10.14-MASTER SERVICES AGREEMENT_Part2__Notice Period To Terminate Renewal",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 461,
+      "sample_id": "IntegrityMediaInc_20010329_10-K405_EX-10.17_2373875_EX-10.17_Co-Branding Agreement__Uncapped Liability",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 465,
+      "sample_id": "CardlyticsInc_20180112_S-1_EX-10.16_11002987_EX-10.16_Maintenance Agreement4__Exclusivity",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 466,
+      "sample_id": "GALERATHERAPEUTICS,INC_02_14_2020-EX-99.A-JOINT FILING AGREEMENT__Source Code Escrow",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 481,
+      "sample_id": "TEARDROPGOLFCO_10_23_1996-EX-10.12-ENDORSEMENT AGREEMENT__Covenant Not To Sue",
+      "supported": false
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 493,
+      "sample_id": "STWRESOURCESHOLDINGCORP_08_06_2014-EX-10.1-COOPERATION AGREEMENT__Governing Law",
+      "supported": true
+    },
+    {
+      "subset": "cuad",
+      "split": "validation",
+      "row_index": 508,
+      "sample_id": "ATHENSBANCSHARESCORP_11_02_2009-EX-1.2-AGENCY AGREEMENT , 2009__Cap On Liability",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 4,
+      "sample_id": "expertqa_17",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 6,
+      "sample_id": "expertqa_2019",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 8,
+      "sample_id": "expertqa_1493",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 9,
+      "sample_id": "expertqa_1678",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 17,
+      "sample_id": "expertqa_1137",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 20,
+      "sample_id": "expertqa_1818",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 21,
+      "sample_id": "expertqa_1607",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 22,
+      "sample_id": "expertqa_1690",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 29,
+      "sample_id": "expertqa_1880",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 30,
+      "sample_id": "expertqa_1578",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 39,
+      "sample_id": "expertqa_1017",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 47,
+      "sample_id": "expertqa_1500",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 55,
+      "sample_id": "expertqa_869",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 56,
+      "sample_id": "expertqa_1513",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 58,
+      "sample_id": "expertqa_355",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 66,
+      "sample_id": "expertqa_71",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 67,
+      "sample_id": "expertqa_1530",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 69,
+      "sample_id": "expertqa_1842",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 77,
+      "sample_id": "expertqa_753",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 79,
+      "sample_id": "expertqa_1454",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 82,
+      "sample_id": "expertqa_496",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 83,
+      "sample_id": "expertqa_481",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 87,
+      "sample_id": "expertqa_838",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 89,
+      "sample_id": "expertqa_799",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 91,
+      "sample_id": "expertqa_499",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 94,
+      "sample_id": "expertqa_267",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 97,
+      "sample_id": "expertqa_1502",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 101,
+      "sample_id": "expertqa_743",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 109,
+      "sample_id": "expertqa_635",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 110,
+      "sample_id": "expertqa_1173",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 114,
+      "sample_id": "expertqa_1211",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 115,
+      "sample_id": "expertqa_1868",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 117,
+      "sample_id": "expertqa_1761",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 122,
+      "sample_id": "expertqa_1636",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 140,
+      "sample_id": "expertqa_228",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 141,
+      "sample_id": "expertqa_1125",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 145,
+      "sample_id": "expertqa_868",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 146,
+      "sample_id": "expertqa_933",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 148,
+      "sample_id": "expertqa_1570",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 150,
+      "sample_id": "expertqa_819",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 166,
+      "sample_id": "expertqa_790",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 167,
+      "sample_id": "expertqa_313",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 180,
+      "sample_id": "expertqa_413",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 185,
+      "sample_id": "expertqa_1619",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 188,
+      "sample_id": "expertqa_898",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 191,
+      "sample_id": "expertqa_26",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 192,
+      "sample_id": "expertqa_755",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 197,
+      "sample_id": "expertqa_939",
+      "supported": true
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 198,
+      "sample_id": "expertqa_435",
+      "supported": false
+    },
+    {
+      "subset": "expertqa",
+      "split": "validation",
+      "row_index": 200,
+      "sample_id": "expertqa_1055",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 0,
+      "sample_id": "finqa_8152",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 49,
+      "sample_id": "finqa_8012",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 58,
+      "sample_id": "finqa_8111",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 123,
+      "sample_id": "finqa_7616",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 129,
+      "sample_id": "finqa_8176",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 143,
+      "sample_id": "finqa_7945",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 148,
+      "sample_id": "finqa_7756",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 154,
+      "sample_id": "finqa_8168",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 169,
+      "sample_id": "finqa_7753",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 182,
+      "sample_id": "finqa_7806",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 196,
+      "sample_id": "finqa_7654",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 218,
+      "sample_id": "finqa_8209",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 220,
+      "sample_id": "finqa_7571",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 255,
+      "sample_id": "finqa_7794",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 272,
+      "sample_id": "finqa_7801",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 276,
+      "sample_id": "finqa_7404",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 326,
+      "sample_id": "finqa_7583",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 337,
+      "sample_id": "finqa_8151",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 354,
+      "sample_id": "finqa_8030",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 368,
+      "sample_id": "finqa_7874",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 369,
+      "sample_id": "finqa_8011",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 435,
+      "sample_id": "finqa_8265",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 450,
+      "sample_id": "finqa_8193",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 466,
+      "sample_id": "finqa_7936",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 480,
+      "sample_id": "finqa_8186",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 503,
+      "sample_id": "finqa_8035",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 536,
+      "sample_id": "finqa_7997",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 585,
+      "sample_id": "finqa_7686",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 617,
+      "sample_id": "finqa_7957",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 753,
+      "sample_id": "finqa_7503",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 816,
+      "sample_id": "finqa_7990",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 855,
+      "sample_id": "finqa_7667",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 917,
+      "sample_id": "finqa_7461",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 992,
+      "sample_id": "finqa_7845",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1001,
+      "sample_id": "finqa_8114",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1043,
+      "sample_id": "finqa_8268",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1234,
+      "sample_id": "finqa_7779",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1264,
+      "sample_id": "finqa_7772",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1282,
+      "sample_id": "finqa_7932",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1316,
+      "sample_id": "finqa_7406",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1404,
+      "sample_id": "finqa_7814",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1407,
+      "sample_id": "finqa_8128",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1418,
+      "sample_id": "finqa_7613",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1433,
+      "sample_id": "finqa_8165",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1461,
+      "sample_id": "finqa_7954",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1496,
+      "sample_id": "finqa_7911",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1534,
+      "sample_id": "finqa_7489",
+      "supported": true
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1587,
+      "sample_id": "finqa_7435",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1626,
+      "sample_id": "finqa_7677",
+      "supported": false
+    },
+    {
+      "subset": "finqa",
+      "split": "validation",
+      "row_index": 1664,
+      "sample_id": "finqa_7921",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 0,
+      "sample_id": "hagrid_12_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 1,
+      "sample_id": "hagrid_3687_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 6,
+      "sample_id": "hagrid_2921_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 8,
+      "sample_id": "hagrid_2797_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 9,
+      "sample_id": "hagrid_3277_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 14,
+      "sample_id": "hagrid_3318_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 31,
+      "sample_id": "hagrid_1435_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 46,
+      "sample_id": "hagrid_308_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 63,
+      "sample_id": "hagrid_2771_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 70,
+      "sample_id": "hagrid_357_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 74,
+      "sample_id": "hagrid_4053_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 79,
+      "sample_id": "hagrid_4403_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 81,
+      "sample_id": "hagrid_2794_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 88,
+      "sample_id": "hagrid_4040_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 101,
+      "sample_id": "hagrid_3573_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 105,
+      "sample_id": "hagrid_2973_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 111,
+      "sample_id": "hagrid_3507_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 118,
+      "sample_id": "hagrid_4212_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 135,
+      "sample_id": "hagrid_2841_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 140,
+      "sample_id": "hagrid_3313_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 143,
+      "sample_id": "hagrid_2158_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 146,
+      "sample_id": "hagrid_4060_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 154,
+      "sample_id": "hagrid_3134_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 155,
+      "sample_id": "hagrid_2114_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 160,
+      "sample_id": "hagrid_3728_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 164,
+      "sample_id": "hagrid_1493_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 165,
+      "sample_id": "hagrid_4005_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 177,
+      "sample_id": "hagrid_3561_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 180,
+      "sample_id": "hagrid_4013_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 181,
+      "sample_id": "hagrid_1361_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 184,
+      "sample_id": "hagrid_3754_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 185,
+      "sample_id": "hagrid_2939_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 191,
+      "sample_id": "hagrid_4194_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 203,
+      "sample_id": "hagrid_3887_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 207,
+      "sample_id": "hagrid_1438_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 210,
+      "sample_id": "hagrid_4035_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 218,
+      "sample_id": "hagrid_4282_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 219,
+      "sample_id": "hagrid_3221_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 227,
+      "sample_id": "hagrid_1532_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 252,
+      "sample_id": "hagrid_3480_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 253,
+      "sample_id": "hagrid_3130_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 261,
+      "sample_id": "hagrid_2274_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 265,
+      "sample_id": "hagrid_78_0",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 266,
+      "sample_id": "hagrid_3065_1",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 289,
+      "sample_id": "hagrid_2132_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 290,
+      "sample_id": "hagrid_3147_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 293,
+      "sample_id": "hagrid_3971_1",
+      "supported": true
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 300,
+      "sample_id": "hagrid_195_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 302,
+      "sample_id": "hagrid_348_0",
+      "supported": false
+    },
+    {
+      "subset": "hagrid",
+      "split": "validation",
+      "row_index": 321,
+      "sample_id": "hagrid_4429_0",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 2,
+      "sample_id": "5a79d2fe5542994f819ef0c3",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 4,
+      "sample_id": "5a8d7b1755429941ae14dfc6",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 16,
+      "sample_id": "5a78dc4d55429970f5fffdb6",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 45,
+      "sample_id": "5ae150ab55429901ffe4ae53",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 47,
+      "sample_id": "5ab1c2bf5542997061209558",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 70,
+      "sample_id": "5ab487765542990594ba9c4e",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 71,
+      "sample_id": "5a8bd43c5542997f31a41dd6",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 82,
+      "sample_id": "5a84bb825542991dd0999dbe",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 86,
+      "sample_id": "5ae206c45542994d89d5b311",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 93,
+      "sample_id": "5ae5d82f554299546bf82f9a",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 114,
+      "sample_id": "5ac2927b5542996366519a17",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 133,
+      "sample_id": "5a72e28f5542992359bc31ba",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 143,
+      "sample_id": "5ae1091055429920d523429b",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 148,
+      "sample_id": "5ab938fb554299131ca422ce",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 164,
+      "sample_id": "5a87f3cb5542994846c1ce03",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 172,
+      "sample_id": "5a7526945542993748c897d2",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 180,
+      "sample_id": "5a88cf7e5542993b751ca85b",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 184,
+      "sample_id": "5a8bf0835542995d1e6f146b",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 213,
+      "sample_id": "5a83316b5542993344745fe5",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 218,
+      "sample_id": "5ac2616b5542996366519997",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 220,
+      "sample_id": "5a73090455429901807daf6e",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 222,
+      "sample_id": "5a80297f5542992e7d278e08",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 225,
+      "sample_id": "5ae471fa55429970de88d965",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 238,
+      "sample_id": "5a7f296f55429934daa2fd10",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 244,
+      "sample_id": "5a85fa815542996432c57155",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 260,
+      "sample_id": "5ab9d02155429970cfb8ebb0",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 263,
+      "sample_id": "5a7b3fc155429931da12ca3a",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 264,
+      "sample_id": "5abd1b6e55429933744ab729",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 275,
+      "sample_id": "5ae2125e554299495565d9db",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 279,
+      "sample_id": "5a8c743e5542996e8ac88ab3",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 280,
+      "sample_id": "5a7c465a5542990527d5547f",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 284,
+      "sample_id": "5a76f22055429972597f13fa",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 289,
+      "sample_id": "5a7b85c4554299294a54a9d7",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 294,
+      "sample_id": "5adbd3405542994650320bf8",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 308,
+      "sample_id": "5a8b595855429949d91db563",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 310,
+      "sample_id": "5a85e57a5542994c784ddbb1",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 314,
+      "sample_id": "5ae72a975542991e8301cb75",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 319,
+      "sample_id": "5a80a1b25542992bc0c4a78c",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 336,
+      "sample_id": "5add1c485542992c1e3a253d",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 338,
+      "sample_id": "5ae5c212554299546bf82f4b",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 339,
+      "sample_id": "5abeb1925542994516f453f0",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 340,
+      "sample_id": "5ae22eae554299495565da30",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 342,
+      "sample_id": "5a75383a5542996c70cfaeb3",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 355,
+      "sample_id": "5a73830d55429908901be2da",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 358,
+      "sample_id": "5a7f57a45542992097ad2f29",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 384,
+      "sample_id": "5ac3d68f554299076e296ca6",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 388,
+      "sample_id": "5ac55e835542993e66e82375",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 390,
+      "sample_id": "5ae0ce4e554299603e41845f",
+      "supported": false
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 391,
+      "sample_id": "5a73250a5542991f9a20c643",
+      "supported": true
+    },
+    {
+      "subset": "hotpotqa",
+      "split": "validation",
+      "row_index": 404,
+      "sample_id": "5abdc8e755429965af743e3f",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 4,
+      "sample_id": "3122",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 8,
+      "sample_id": "7724",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 16,
+      "sample_id": "5614",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 17,
+      "sample_id": "478",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 29,
+      "sample_id": "399",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 31,
+      "sample_id": "6118",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 46,
+      "sample_id": "1013",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 68,
+      "sample_id": "1505",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 69,
+      "sample_id": "9591",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 79,
+      "sample_id": "4699",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 89,
+      "sample_id": "2742",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 90,
+      "sample_id": "2117",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 99,
+      "sample_id": "2077",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 104,
+      "sample_id": "6388",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 105,
+      "sample_id": "7657",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 107,
+      "sample_id": "3211",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 126,
+      "sample_id": "7461",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 129,
+      "sample_id": "8460",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 147,
+      "sample_id": "675",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 164,
+      "sample_id": "1642",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 169,
+      "sample_id": "3266",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 176,
+      "sample_id": "803",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 181,
+      "sample_id": "5680",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 190,
+      "sample_id": "7323",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 193,
+      "sample_id": "2089",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 213,
+      "sample_id": "6170",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 228,
+      "sample_id": "9542",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 245,
+      "sample_id": "4716",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 258,
+      "sample_id": "7277",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 274,
+      "sample_id": "7266",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 289,
+      "sample_id": "5471",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 293,
+      "sample_id": "619",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 311,
+      "sample_id": "3393",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 316,
+      "sample_id": "1884",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 317,
+      "sample_id": "2681",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 325,
+      "sample_id": "4236",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 329,
+      "sample_id": "9182",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 332,
+      "sample_id": "2601",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 337,
+      "sample_id": "3379",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 341,
+      "sample_id": "4477",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 365,
+      "sample_id": "1242",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 368,
+      "sample_id": "4439",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 372,
+      "sample_id": "267",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 375,
+      "sample_id": "8450",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 378,
+      "sample_id": "6113",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 381,
+      "sample_id": "3981",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 382,
+      "sample_id": "6061",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 391,
+      "sample_id": "5915",
+      "supported": true
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 393,
+      "sample_id": "1808",
+      "supported": false
+    },
+    {
+      "subset": "msmarco",
+      "split": "validation",
+      "row_index": 395,
+      "sample_id": "9588",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 8,
+      "sample_id": "pubmedqa_31907",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 33,
+      "sample_id": "pubmedqa_26851",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 35,
+      "sample_id": "pubmedqa_57671",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 41,
+      "sample_id": "pubmedqa_5403",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 70,
+      "sample_id": "pubmedqa_3562",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 108,
+      "sample_id": "pubmedqa_55338",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 110,
+      "sample_id": "pubmedqa_33501",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 218,
+      "sample_id": "pubmedqa_14490",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 257,
+      "sample_id": "pubmedqa_44668",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 268,
+      "sample_id": "pubmedqa_32165",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 283,
+      "sample_id": "pubmedqa_13446",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 314,
+      "sample_id": "pubmedqa_13527",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 369,
+      "sample_id": "pubmedqa_8688",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 441,
+      "sample_id": "pubmedqa_5180",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 473,
+      "sample_id": "pubmedqa_48180",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 516,
+      "sample_id": "pubmedqa_59196",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 528,
+      "sample_id": "pubmedqa_58453",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 536,
+      "sample_id": "pubmedqa_2131",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 625,
+      "sample_id": "pubmedqa_16341",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 682,
+      "sample_id": "pubmedqa_24931",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 728,
+      "sample_id": "pubmedqa_10377",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 737,
+      "sample_id": "pubmedqa_56919",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 909,
+      "sample_id": "pubmedqa_41547",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1037,
+      "sample_id": "pubmedqa_53099",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1051,
+      "sample_id": "pubmedqa_13155",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1121,
+      "sample_id": "pubmedqa_28938",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1123,
+      "sample_id": "pubmedqa_39719",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1154,
+      "sample_id": "pubmedqa_16336",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1188,
+      "sample_id": "pubmedqa_47179",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1225,
+      "sample_id": "pubmedqa_3866",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1280,
+      "sample_id": "pubmedqa_28869",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1322,
+      "sample_id": "pubmedqa_4561",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1342,
+      "sample_id": "pubmedqa_55681",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1392,
+      "sample_id": "pubmedqa_33726",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1409,
+      "sample_id": "pubmedqa_2945",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1418,
+      "sample_id": "pubmedqa_32212",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1460,
+      "sample_id": "pubmedqa_15368",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1562,
+      "sample_id": "pubmedqa_43192",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1582,
+      "sample_id": "pubmedqa_45748",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1733,
+      "sample_id": "pubmedqa_52150",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1850,
+      "sample_id": "pubmedqa_16341",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 1928,
+      "sample_id": "pubmedqa_26726",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2061,
+      "sample_id": "pubmedqa_55414",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2076,
+      "sample_id": "pubmedqa_61025",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2106,
+      "sample_id": "pubmedqa_23360",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2138,
+      "sample_id": "pubmedqa_42103",
+      "supported": false
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2184,
+      "sample_id": "pubmedqa_8078",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2205,
+      "sample_id": "pubmedqa_14396",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2300,
+      "sample_id": "pubmedqa_6338",
+      "supported": true
+    },
+    {
+      "subset": "pubmedqa",
+      "split": "validation",
+      "row_index": 2395,
+      "sample_id": "pubmedqa_9150",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 27,
+      "sample_id": "finqa_validation_99",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 48,
+      "sample_id": "finqa_validation_1327",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 157,
+      "sample_id": "finqa_validation_312",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 166,
+      "sample_id": "finqa_validation_390",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 229,
+      "sample_id": "finqa_validation_730",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 233,
+      "sample_id": "finqa_validation_1070",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 242,
+      "sample_id": "finqa_validation_842",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 324,
+      "sample_id": "finqa_validation_500",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 415,
+      "sample_id": "finqa_validation_714",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 487,
+      "sample_id": "finqa_validation_1359",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 604,
+      "sample_id": "finqa_validation_1611",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 787,
+      "sample_id": "finqa_validation_241",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 790,
+      "sample_id": "finqa_validation_520",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 814,
+      "sample_id": "finqa_validation_919",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 850,
+      "sample_id": "finqa_validation_263",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 898,
+      "sample_id": "finqa_validation_1538",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 957,
+      "sample_id": "finqa_validation_517",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1048,
+      "sample_id": "finqa_validation_1225",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1148,
+      "sample_id": "finqa_validation_230",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1161,
+      "sample_id": "finqa_validation_1018",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1165,
+      "sample_id": "finqa_validation_1247",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1195,
+      "sample_id": "finqa_validation_9",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1204,
+      "sample_id": "finqa_validation_834",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1238,
+      "sample_id": "finqa_validation_1089",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1312,
+      "sample_id": "finqa_validation_1156",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1322,
+      "sample_id": "finqa_validation_1322",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1483,
+      "sample_id": "finqa_validation_131",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1524,
+      "sample_id": "finqa_validation_396",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1592,
+      "sample_id": "finqa_validation_748",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1597,
+      "sample_id": "finqa_validation_364",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1627,
+      "sample_id": "finqa_validation_34",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1674,
+      "sample_id": "finqa_validation_1151",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1819,
+      "sample_id": "finqa_validation_605",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1926,
+      "sample_id": "finqa_validation_1143",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 1970,
+      "sample_id": "finqa_validation_1074",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2075,
+      "sample_id": "finqa_validation_63",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2163,
+      "sample_id": "finqa_validation_1282",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2193,
+      "sample_id": "finqa_validation_254",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2276,
+      "sample_id": "finqa_validation_240",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2366,
+      "sample_id": "finqa_validation_1552",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2568,
+      "sample_id": "finqa_validation_12",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2601,
+      "sample_id": "finqa_validation_977",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2664,
+      "sample_id": "finqa_validation_606",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2699,
+      "sample_id": "finqa_validation_85",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2722,
+      "sample_id": "finqa_validation_529",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2793,
+      "sample_id": "finqa_validation_401",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2821,
+      "sample_id": "finqa_validation_793",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 2988,
+      "sample_id": "finqa_validation_1507",
+      "supported": true
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 3226,
+      "sample_id": "finqa_validation_1605",
+      "supported": false
+    },
+    {
+      "subset": "tatqa",
+      "split": "validation",
+      "row_index": 3299,
+      "sample_id": "finqa_validation_542",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 1,
+      "sample_id": "techqa_DEV_Q089",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 3,
+      "sample_id": "techqa_DEV_Q144",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 15,
+      "sample_id": "techqa_DEV_Q299",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 16,
+      "sample_id": "techqa_DEV_Q167",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 19,
+      "sample_id": "techqa_DEV_Q079",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 31,
+      "sample_id": "techqa_DEV_Q193",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 33,
+      "sample_id": "techqa_DEV_Q223",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 40,
+      "sample_id": "techqa_DEV_Q038",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 57,
+      "sample_id": "techqa_DEV_Q228",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 62,
+      "sample_id": "techqa_DEV_Q159",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 66,
+      "sample_id": "techqa_DEV_Q002",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 74,
+      "sample_id": "techqa_DEV_Q142",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 82,
+      "sample_id": "techqa_DEV_Q082",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 91,
+      "sample_id": "techqa_DEV_Q202",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 96,
+      "sample_id": "techqa_DEV_Q083",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 97,
+      "sample_id": "techqa_DEV_Q187",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 114,
+      "sample_id": "techqa_DEV_Q295",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 117,
+      "sample_id": "techqa_DEV_Q117",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 119,
+      "sample_id": "techqa_DEV_Q120",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 132,
+      "sample_id": "techqa_DEV_Q048",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 133,
+      "sample_id": "techqa_DEV_Q176",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 137,
+      "sample_id": "techqa_DEV_Q213",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 149,
+      "sample_id": "techqa_DEV_Q086",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 156,
+      "sample_id": "techqa_DEV_Q229",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 163,
+      "sample_id": "techqa_DEV_Q107",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 165,
+      "sample_id": "techqa_DEV_Q050",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 166,
+      "sample_id": "techqa_DEV_Q289",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 170,
+      "sample_id": "techqa_DEV_Q298",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 181,
+      "sample_id": "techqa_DEV_Q258",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 188,
+      "sample_id": "techqa_DEV_Q011",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 193,
+      "sample_id": "techqa_DEV_Q155",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 196,
+      "sample_id": "techqa_DEV_Q175",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 202,
+      "sample_id": "techqa_DEV_Q233",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 206,
+      "sample_id": "techqa_DEV_Q191",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 212,
+      "sample_id": "techqa_DEV_Q075",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 218,
+      "sample_id": "techqa_DEV_Q002",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 226,
+      "sample_id": "techqa_DEV_Q142",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 228,
+      "sample_id": "techqa_DEV_Q025",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 232,
+      "sample_id": "techqa_DEV_Q185",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 234,
+      "sample_id": "techqa_DEV_Q082",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 240,
+      "sample_id": "techqa_DEV_Q211",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 242,
+      "sample_id": "techqa_DEV_Q198",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 246,
+      "sample_id": "techqa_DEV_Q262",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 250,
+      "sample_id": "techqa_DEV_Q127",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 254,
+      "sample_id": "techqa_DEV_Q214",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 265,
+      "sample_id": "techqa_DEV_Q152",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 269,
+      "sample_id": "techqa_DEV_Q117",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 281,
+      "sample_id": "techqa_DEV_Q224",
+      "supported": true
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 300,
+      "sample_id": "techqa_DEV_Q045",
+      "supported": false
+    },
+    {
+      "subset": "techqa",
+      "split": "validation",
+      "row_index": 303,
+      "sample_id": "techqa_DEV_Q225",
+      "supported": true
+    }
+  ]
+}
