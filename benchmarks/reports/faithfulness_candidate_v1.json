@@ -1,0 +1,91 @@
+{
+  "candidate_version": "faithfulness-bge-v1",
+  "status": "FROZEN_BEFORE_FINAL_TEST",
+  "frozen_at_utc": "2026-08-21T17:22:40.465772+00:00",
+  "selection_policy": {
+    "primary_metric": "roc_auc",
+    "reason": "Threshold-independent discrimination metric.",
+    "development_split": "RAGBench validation",
+    "final_holdout": "RAGBench test",
+    "test_used_for_selection": false
+  },
+  "architecture": {
+    "candidate_retriever": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "candidate_top_k": 15,
+    "reranker": "BAAI/bge-reranker-v2-m3",
+    "reranker_selection_k": 5,
+    "reranking_strategy": "BGE score",
+    "judge": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+    "judge_fine_tuned": false,
+    "max_length": 512
+  },
+  "decision_threshold": {
+    "value": 0.254,
+    "calibrated_on": "development validation only",
+    "must_not_retune_on_test": true
+  },
+  "development_validation": {
+    "sha256": "889a79dbfc5cfeb7c5910585081811b615ca23157a81b07b82824da330b6cee3",
+    "sample_count": 628,
+    "baseline": {
+      "roc_auc": 0.7090297780843037,
+      "average_precision": 0.6976286237996059,
+      "best_threshold": 0.312,
+      "balanced_accuracy": 0.6799363057324841,
+      "precision": 0.6982456140350877,
+      "recall": 0.6337579617834395,
+      "specificity": 0.7261146496815286,
+      "f1": 0.664440734557596,
+      "tp": 199,
+      "tn": 228,
+      "fp": 86,
+      "fn": 115
+    },
+    "selected_candidate": {
+      "roc_auc": 0.7367134569353726,
+      "average_precision": 0.7177224233767739,
+      "best_threshold": 0.254,
+      "balanced_accuracy": 0.6942675159235668,
+      "precision": 0.6837349397590361,
+      "recall": 0.7229299363057324,
+      "specificity": 0.6656050955414012,
+      "f1": 0.7027863777089783,
+      "tp": 227,
+      "tn": 209,
+      "fp": 105,
+      "fn": 87,
+      "any_gold_recall": 0.9171974522292994,
+      "all_gold_recall": 0.7579617834394905
+    },
+    "challenger_rrf_top5": {
+      "roc_auc": 0.7353391618321229,
+      "average_precision": 0.6980459231763775,
+      "best_threshold": 0.322,
+      "balanced_accuracy": 0.6990445859872612,
+      "precision": 0.6984126984126984,
+      "recall": 0.7006369426751592,
+      "specificity": 0.697452229299363,
+      "f1": 0.6995230524642289,
+      "tp": 220,
+      "tn": 219,
+      "fp": 95,
+      "fn": 94,
+      "any_gold_recall": 0.9171974522292994,
+      "all_gold_recall": 0.7229299363057324
+    },
+    "auc_improvement": 0.027683678851068927
+  },
+  "holdout_rules": {
+    "evaluate_test_once": true,
+    "fixed_architecture": "bge_top_5",
+    "fixed_threshold": 0.254,
+    "no_test_threshold_tuning": true,
+    "no_switch_to_rrf_based_on_test": true,
+    "no_v7_selection_based_on_test": true
+  },
+  "artifacts": {
+    "validation_sha256": "889a79dbfc5cfeb7c5910585081811b615ca23157a81b07b82824da330b6cee3",
+    "experiment_result_sha256": "dc39729e108992cc443c4ee58d5884cdeaeed05cf5e658477325bcb7adc98a92",
+    "experiment_script_sha256": "b6baa98394e860541013aea2b584b7b11dce225b4d4397606e1cc7a4b3c8cb6f"
+  }
+}

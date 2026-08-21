@@ -1,0 +1,80 @@
+{
+  "evaluation_type": "FINAL_ONE_SHOT_RAGBENCH_TEST",
+  "candidate_version": "faithfulness-bge-v1",
+  "candidate_freeze_sha256": "349bc342b1b25b7a19367d74fa290be0152d5a86a4d61bb034917e1fe2cc5cd6",
+  "test_manifest_sha256": "fa937a14051f79d351318c8e887a74e549b85b74d1086ef277afaa676b181041",
+  "test_claims_sha256": "4c3d9fd6232141e6b3f46e4accf1ce9e1b58a7d240f0167eaa30e5e411d39179",
+  "test_split": "test",
+  "sample_level_count": 500,
+  "claim_level_count": 590,
+  "supported_claims": 295,
+  "unsupported_claims": 295,
+  "threshold_policy": {
+    "candidate_threshold": 0.254,
+    "baseline_threshold": 0.312,
+    "threshold_tuned_on_test": false
+  },
+  "retrieval_diagnostics": {
+    "gold_eligible": 295,
+    "baseline_any_gold_recall": 0.9593220338983051,
+    "baseline_all_gold_recall": 0.7254237288135593,
+    "candidate_any_gold_recall": 0.9796610169491525,
+    "candidate_all_gold_recall": 0.7559322033898305
+  },
+  "baseline": {
+    "roc_auc": 0.6888365412237862,
+    "roc_auc_95_ci": [
+      0.6451494932626616,
+      0.7298101314671475
+    ],
+    "average_precision": 0.6605706834001508,
+    "fixed_threshold": 0.312,
+    "metrics": {
+      "tp": 183,
+      "tn": 192,
+      "fp": 103,
+      "fn": 112,
+      "accuracy": 0.635593220338983,
+      "balanced_accuracy": 0.635593220338983,
+      "precision": 0.6398601398601399,
+      "recall": 0.6203389830508474,
+      "specificity": 0.6508474576271186,
+      "f1": 0.629948364888124
+    }
+  },
+  "candidate": {
+    "roc_auc": 0.7030623384085033,
+    "roc_auc_95_ci": [
+      0.658618383871408,
+      0.7435271986122478
+    ],
+    "average_precision": 0.6712380533829391,
+    "fixed_threshold": 0.254,
+    "metrics": {
+      "tp": 200,
+      "tn": 181,
+      "fp": 114,
+      "fn": 95,
+      "accuracy": 0.6457627118644068,
+      "balanced_accuracy": 0.6457627118644067,
+      "precision": 0.6369426751592356,
+      "recall": 0.6779661016949152,
+      "specificity": 0.6135593220338983,
+      "f1": 0.6568144499178983
+    }
+  },
+  "comparison": {
+    "auc_delta": 0.01422579718471706,
+    "auc_delta_95_ci": [
+      -0.017539435686407596,
+      0.04668666191607872
+    ],
+    "status": "POSITIVE_BUT_CI_INCLUDES_ZERO"
+  },
+  "rules": {
+    "architecture_changed_on_test": false,
+    "threshold_retuned_on_test": false,
+    "rrf_evaluated_for_selection": false,
+    "v6_adapter_used": false
+  }
+}
