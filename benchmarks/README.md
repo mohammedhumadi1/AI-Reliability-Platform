@@ -40,7 +40,7 @@ Thresholds must be calibrated on validation data only, not the final test split.
 uv run python benchmarks/run_mdeberta_baseline.py
 ```
 
-This uses `MoritzLaurer/mDeBERTA-v3-base-mnli-xnli` as a pretrained multilingual NLI judge. It is not fine-tuned by this project.
+This uses `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli` as a pretrained multilingual NLI judge. It is not fine-tuned by this project.
 
 ## Tests
 
