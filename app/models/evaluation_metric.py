@@ -8,6 +8,7 @@ from sqlalchemy import (
     Float,
     ForeignKey,
     Integer,
+    JSON,
     String,
     Text,
     UniqueConstraint,
@@ -93,6 +94,33 @@ class EvaluationMetric(Base):
     explanation: Mapped[str] = mapped_column(
         Text,
         nullable=False,
+    )
+
+    evaluation_version: Mapped[str | None] = mapped_column(
+        String(50),
+        nullable=True,
+    )
+
+    embedding_model_name: Mapped[str | None] = mapped_column(
+        String(255),
+        nullable=True,
+    )
+
+    scoring_version: Mapped[str | None] = mapped_column(
+        String(50),
+        nullable=True,
+    )
+
+    score_profile: Mapped[str | None] = mapped_column(
+        String(50),
+        nullable=True,
+    )
+
+    weights_used: Mapped[
+        dict[str, float] | None
+    ] = mapped_column(
+        JSON,
+        nullable=True,
     )
 
     created_at: Mapped[datetime] = mapped_column(

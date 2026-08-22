@@ -37,6 +37,13 @@ class EvaluationResultResponse(BaseModel):
 
     status: str
     explanation: str
+    evaluation_version: str | None = None
+    embedding_model_name: str | None = None
+    scoring_version: str | None = None
+    score_profile: str | None = None
+    weights_used: (
+        dict[str, float] | None
+    ) = None
 
 
 class KnowledgeBaseVerificationResponse(

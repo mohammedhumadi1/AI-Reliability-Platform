@@ -21,6 +21,12 @@ from app.schemas.evaluation_result import (
 )
 from app.schemas.health_check import HealthCheckRequest
 from evaluation.pipeline import run_evaluation
+from evaluation.versioning import (
+    EMBEDDING_MODEL_NAME,
+    EVALUATION_VERSION,
+    SCORING_VERSION,
+    resolve_score_profile,
+)
 from knowledge_base.verification_agent import (
     VerificationResult,
     verify_answer,
@@ -158,6 +164,10 @@ def execute_health_check(
         health_metrics
     )
 
+    score_profile = resolve_score_profile(
+        verification.health_score_component
+    )
+
     # 5) Recommendation engine.
     recommendations = (
         generate_recommendations(
@@ -253,6 +263,11 @@ def execute_health_check(
                 explanation=(
                     result.explanation
                 ),
+                evaluation_version=EVALUATION_VERSION,
+                embedding_model_name=EMBEDDING_MODEL_NAME,
+                scoring_version=SCORING_VERSION,
+                score_profile=score_profile,
+                weights_used=health_score.weights_used,
             )
         )
 
@@ -425,6 +440,11 @@ def execute_health_check(
                 explanation=(
                     result.explanation
                 ),
+                evaluation_version=EVALUATION_VERSION,
+                embedding_model_name=EMBEDDING_MODEL_NAME,
+                scoring_version=SCORING_VERSION,
+                score_profile=score_profile,
+                weights_used=health_score.weights_used,
             )
         ),
         knowledge_base_verification=(

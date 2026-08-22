@@ -59,6 +59,11 @@ def build_evaluation_response(
         hallucination_risk=metric.hallucination_risk,
         status=metric.evaluation_status,
         explanation=metric.explanation,
+        evaluation_version=metric.evaluation_version,
+        embedding_model_name=metric.embedding_model_name,
+        scoring_version=metric.scoring_version,
+        score_profile=metric.score_profile,
+        weights_used=metric.weights_used,
     )
 
 
@@ -300,6 +305,21 @@ def list_health_checks(
                     else None
                 ),
                 created_at=health_check.created_at,
+                evaluation_version=(
+                    metric.evaluation_version
+                    if metric
+                    else None
+                ),
+                scoring_version=(
+                    metric.scoring_version
+                    if metric
+                    else None
+                ),
+                score_profile=(
+                    metric.score_profile
+                    if metric
+                    else None
+                ),
             )
         )
 

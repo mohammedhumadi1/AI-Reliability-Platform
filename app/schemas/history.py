@@ -39,6 +39,9 @@ class HealthCheckHistoryItem(BaseModel):
 
     health_status: str | None = None
     evaluation_status: str | None = None
+    evaluation_version: str | None = None
+    scoring_version: str | None = None
+    score_profile: str | None = None
     diagnosis_category: str | None = None
     knowledge_base_status: str | None = None
 
