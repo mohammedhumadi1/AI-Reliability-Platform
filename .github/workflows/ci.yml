@@ -33,7 +33,7 @@ jobs:
         run: >-
           uv run python -m compileall
           app dashboard evaluation knowledge_base
-          recommendation_engine reporting root_cause tests -q
+          recommendation_engine reporting root_cause benchmarks tests -q
 
       - name: Test
         run: uv run pytest -q
