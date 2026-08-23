@@ -8,6 +8,7 @@ from functools import lru_cache
 
 import chromadb
 from dotenv import load_dotenv
+from chromadb.errors import NotFoundError
 
 from evaluation.generation.embedding_service import get_embedding_model
 
@@ -43,6 +44,20 @@ def get_or_create_collection(project_id: str):
     )
 
 
+def get_collection_if_exists(project_id: str):
+    """Return an existing project collection without creating one."""
+    collection_name = collection_name_for_project(
+        project_id
+    )
+
+    try:
+        return get_client().get_collection(
+            name=collection_name
+        )
+    except (NotFoundError, ValueError):
+        return None
+
+
 def _embed_texts(texts: list[str]) -> list[list[float]]:
     if not texts:
         return []
@@ -60,9 +75,12 @@ def _embed_texts(texts: list[str]) -> list[list[float]]:
 
 
 def collection_record_count(project_id: str) -> int:
-    return int(
-        get_or_create_collection(project_id).count()
-    )
+    collection = get_collection_if_exists(project_id)
+
+    if collection is None:
+        return 0
+
+    return int(collection.count())
 
 
 def add_chunks(
@@ -110,15 +128,19 @@ def add_chunks(
 def delete_document(
     project_id: str,
     document_id: str,
-) -> None:
+) -> bool:
     """Delete all Chroma records belonging to one document."""
-    collection = get_or_create_collection(project_id)
+    collection = get_collection_if_exists(project_id)
+
+    if collection is None:
+        return False
 
     collection.delete(
         where={
             "document_id": document_id,
         }
     )
+    return True
 
 
 def query_similar_chunks(
@@ -132,7 +154,11 @@ def query_similar_chunks(
     if not clean_query:
         raise ValueError("query cannot be empty.")
 
-    collection = get_or_create_collection(project_id)
+    collection = get_collection_if_exists(project_id)
+
+    if collection is None:
+        return []
+
     record_count = int(collection.count())
 
     if record_count == 0:

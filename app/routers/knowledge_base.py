@@ -28,7 +28,7 @@ from knowledge_base.indexing_service import (
     index_document,
 )
 from knowledge_base.vector_store import (
-    delete_document,
+    delete_document as delete_vector_document,
 )
 from knowledge_base.verification_agent import (
     verify_answer,
@@ -169,7 +169,7 @@ async def upload_document(
         except Exception:
             db.rollback()
 
-            delete_document(
+            delete_vector_document(
                 project_id=(
                     clean_project_id
                 ),
@@ -196,6 +196,123 @@ async def upload_document(
             os.remove(
                 temp_path
             )
+
+
+@router.get("/documents")
+def list_documents(
+    project_id: str,
+    db: Session = Depends(get_db),
+) -> dict:
+    clean_project_id = project_id.strip()
+
+    if not clean_project_id:
+        raise HTTPException(
+            status_code=400,
+            detail="project_id cannot be empty.",
+        )
+
+    documents = db.execute(
+        select(
+            KnowledgeBaseDocument
+        )
+        .where(
+            KnowledgeBaseDocument.project_id
+            == clean_project_id
+        )
+        .order_by(
+            KnowledgeBaseDocument.created_at.desc()
+        )
+    ).scalars().all()
+
+    return {
+        "project_id": clean_project_id,
+        "documents": [
+            {
+                "document_id": str(document.id),
+                "source_name": document.source_name,
+                "content_sha256": (
+                    document.content_sha256
+                ),
+                "chunks_indexed": (
+                    document.chunks_indexed
+                ),
+                "status": document.status,
+                "created_at": document.created_at,
+            }
+            for document in documents
+        ],
+    }
+
+
+@router.delete(
+    "/documents/{document_id}"
+)
+def delete_knowledge_base_document(
+    document_id: uuid.UUID,
+    db: Session = Depends(get_db),
+) -> dict:
+    document = db.get(
+        KnowledgeBaseDocument,
+        document_id,
+    )
+
+    if document is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Knowledge base document not found.",
+        )
+
+    project_id = document.project_id
+    document_id_text = str(document.id)
+    original_status = document.status
+
+    # Persist an intermediate state before touching
+    # the external vector store. If final DB cleanup
+    # fails, the incomplete deletion remains visible.
+    document.status = "DELETING"
+
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+
+    try:
+        delete_vector_document(
+            project_id=project_id,
+            document_id=document_id_text,
+        )
+    except Exception as exc:
+        document.status = original_status
+
+        try:
+            db.commit()
+        except Exception:
+            db.rollback()
+
+        raise HTTPException(
+            status_code=503,
+            detail=(
+                "Failed to delete document "
+                "from the vector store."
+            ),
+        ) from exc
+
+    try:
+        db.delete(document)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise
+
+    return {
+        "success": True,
+        "document_id": document_id_text,
+        "project_id": project_id,
+        "message": (
+            "Knowledge base document deleted."
+        ),
+    }
 
 
 @router.post(
