@@ -674,3 +674,95 @@ def test_replace_final_db_failure_returns_503(
     ]
 
     assert file.closed is True
+
+
+def test_replace_reports_database_recovery_failure(
+    monkeypatch,
+):
+    document = make_document()
+
+    db = FakeReplaceSession(
+        document,
+        fail_commit_at=2,
+    )
+
+    file = FakeUploadFile()
+    vector_calls = []
+
+    monkeypatch.setattr(
+        kb_router,
+        "calculate_file_sha256",
+        lambda path: "b" * 64,
+    )
+
+    monkeypatch.setattr(
+        kb_router,
+        "index_document",
+        lambda **kwargs: {
+            "success": True,
+            "document_id": kwargs[
+                "document_id"
+            ],
+            "chunks_indexed": 2,
+            "message": "indexed",
+        },
+    )
+
+    def fake_delete(
+        project_id,
+        document_id,
+    ):
+        vector_calls.append(
+            (project_id, document_id)
+        )
+
+        if document_id == str(
+            document.id
+        ):
+            raise RuntimeError(
+                "old vector delete failed"
+            )
+
+        return True
+
+    monkeypatch.setattr(
+        kb_router,
+        "delete_vector_document",
+        fake_delete,
+    )
+
+    with pytest.raises(
+        HTTPException
+    ) as exc_info:
+        asyncio.run(
+            kb_router.replace_knowledge_base_document(
+                document_id=document.id,
+                file=file,
+                db=db,
+            )
+        )
+
+    assert exc_info.value.status_code == 503
+    assert (
+        "database recovery"
+        in exc_info.value.detail
+    )
+    assert (
+        "Manual recovery is required"
+        in exc_info.value.detail
+    )
+    assert db.commits == 2
+    assert db.rollbacks == 1
+
+    assert vector_calls == [
+        (
+            "project-a",
+            str(document.id),
+        ),
+        (
+            "project-a",
+            str(db.added.id),
+        ),
+    ]
+
+    assert file.closed is True

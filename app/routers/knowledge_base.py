@@ -693,8 +693,19 @@ async def replace_knowledge_base_document(
                     new_document
                 )
                 db.commit()
-            except Exception:
+            except Exception as recovery_exc:
                 db.rollback()
+
+                raise HTTPException(
+                    status_code=503,
+                    detail=(
+                        "Failed to remove the old "
+                        "document from the vector "
+                        "store, and database recovery "
+                        "could not be finalized. "
+                        "Manual recovery is required."
+                    ),
+                ) from recovery_exc
 
             raise HTTPException(
                 status_code=503,
