@@ -98,33 +98,75 @@ def check_knowledge_gap(
 def check_prompt_failure(
     context_precision: float,
     answer_relevancy: float,
+    prompt_evidence: dict | None = None,
     precision_threshold: float = 0.6,
     relevancy_threshold: float = 0.5,
 ) -> Optional[dict]:
-    if (
-        context_precision >= precision_threshold
-        and answer_relevancy < relevancy_threshold
-    ):
-        return {
-            "category": "PROMPT_FAILURE",
-            "subcategory": "LOW_ANSWER_RELEVANCY",
-            "severity": (
-                "HIGH"
-                if answer_relevancy < 0.3
-                else "MEDIUM"
-            ),
-            "confidence": 0.75,
-            "explanation": (
-                f"Context precision is high "
-                f"({context_precision:.2f}) but answer "
-                f"relevancy is low "
-                f"({answer_relevancy:.2f}). This "
-                "suggests a prompt clarity issue or a "
-                "model reasoning failure."
-            ),
-        }
+    """
+    Diagnose a prompt failure only when metric symptoms
+    are supported by direct evidence from the submitted
+    prompt.
 
-    return None
+    Low answer relevancy alone is not enough to establish
+    PROMPT_FAILURE.
+    """
+    if context_precision < precision_threshold:
+        return None
+
+    if answer_relevancy >= relevancy_threshold:
+        return None
+
+    if not prompt_evidence:
+        return None
+
+    issue_code = str(
+        prompt_evidence.get(
+            "issue_code",
+            "",
+        )
+    ).strip()
+
+    evidence_explanation = str(
+        prompt_evidence.get(
+            "explanation",
+            "",
+        )
+    ).strip()
+
+    confidence = prompt_evidence.get(
+        "confidence"
+    )
+
+    if (
+        not issue_code
+        or not evidence_explanation
+        or not isinstance(
+            confidence,
+            (int, float),
+        )
+        or isinstance(confidence, bool)
+        or not 0.0 <= float(confidence) <= 1.0
+    ):
+        return None
+
+    return {
+        "category": "PROMPT_FAILURE",
+        "subcategory": issue_code,
+        "severity": (
+            "HIGH"
+            if answer_relevancy < 0.3
+            else "MEDIUM"
+        ),
+        "confidence": float(confidence),
+        "explanation": (
+            f"Context precision is acceptable "
+            f"({context_precision:.2f}) while answer "
+            f"relevancy is low "
+            f"({answer_relevancy:.2f}). Direct prompt "
+            f"evidence was also detected: "
+            f"{evidence_explanation}"
+        ),
+    }
 
 
 def check_verified_knowledge_result(

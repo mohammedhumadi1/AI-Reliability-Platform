@@ -55,14 +55,61 @@ def test_knowledge_gap_does_not_trigger_on_good_recall():
 from root_cause.rules.retrieval_rules import check_prompt_failure
 
 
-def test_prompt_failure_triggers_on_good_retrieval_low_relevancy():
-    result = check_prompt_failure(context_precision=0.85, answer_relevancy=0.3)
+def test_prompt_failure_does_not_trigger_without_prompt_evidence():
+    result = check_prompt_failure(
+        context_precision=0.85,
+        answer_relevancy=0.3,
+        prompt_evidence=None,
+    )
+
+    assert result is None
+
+
+def test_prompt_failure_triggers_with_direct_prompt_evidence():
+    prompt_evidence = {
+        "issue_code": "CONFLICTING_INSTRUCTIONS",
+        "explanation": (
+            "The prompt contains mutually conflicting "
+            "instructions."
+        ),
+        "confidence": 0.95,
+    }
+
+    result = check_prompt_failure(
+        context_precision=0.85,
+        answer_relevancy=0.3,
+        prompt_evidence=prompt_evidence,
+    )
+
     assert result is not None
     assert result["category"] == "PROMPT_FAILURE"
+    assert (
+        result["subcategory"]
+        == "CONFLICTING_INSTRUCTIONS"
+    )
+    assert result["confidence"] == 0.95
+    assert (
+        "mutually conflicting instructions"
+        in result["explanation"]
+    )
 
 
-def test_prompt_failure_does_not_trigger_when_retrieval_is_bad():
-    result = check_prompt_failure(context_precision=0.4, answer_relevancy=0.3)
+def test_prompt_failure_does_not_override_bad_retrieval():
+    prompt_evidence = {
+        "issue_code": "CONFLICTING_INSTRUCTIONS",
+        "explanation": (
+            "The prompt contains mutually conflicting "
+            "instructions."
+        ),
+        "confidence": 0.95,
+    }
+
+    result = check_prompt_failure(
+        context_precision=0.4,
+        answer_relevancy=0.3,
+        prompt_evidence=prompt_evidence,
+    )
+
     assert result is None
 
 
