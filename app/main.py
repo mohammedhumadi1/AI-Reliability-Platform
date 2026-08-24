@@ -11,6 +11,9 @@ from app.routers.history import (
 from app.routers.knowledge_base import (
     router as knowledge_base_router,
 )
+from app.routers.system_health import (
+    router as system_health_router,
+)
 from app.schemas.evaluation_result import (
     HealthCheckResponse,
 )
@@ -34,6 +37,10 @@ app.include_router(
 
 app.include_router(
     knowledge_base_router
+)
+
+app.include_router(
+    system_health_router
 )
 
 
