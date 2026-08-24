@@ -385,6 +385,387 @@ def list_documents(
     }
 
 
+@router.put(
+    "/documents/{document_id}"
+)
+async def replace_knowledge_base_document(
+    document_id: uuid.UUID,
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+) -> dict:
+    temp_path = None
+    new_document_id = uuid.uuid4()
+
+    try:
+        document = db.get(
+            KnowledgeBaseDocument,
+            document_id,
+        )
+
+        if document is None:
+            raise HTTPException(
+                status_code=404,
+                detail=(
+                    "Knowledge base document "
+                    "not found."
+                ),
+            )
+
+        if document.status != "INDEXED":
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    "Knowledge base document "
+                    "is not currently replaceable."
+                ),
+            )
+
+        raw_source_name = (
+            file.filename
+            or "uploaded.pdf"
+        )
+
+        source_name = (
+            raw_source_name
+            .replace("\\", "/")
+            .split("/")[-1]
+            .strip()
+            or "uploaded.pdf"
+        )
+
+        if not source_name.lower().endswith(
+            ".pdf"
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Only PDF files are currently "
+                    "supported."
+                ),
+            )
+
+        content_type = (
+            file.content_type
+            or ""
+        ).split(
+            ";",
+            1,
+        )[0].strip().lower()
+
+        if (
+            content_type
+            not in ALLOWED_PDF_CONTENT_TYPES
+        ):
+            raise HTTPException(
+                status_code=415,
+                detail=(
+                    "Unsupported media type. "
+                    "Upload a PDF file."
+                ),
+            )
+
+        total_bytes = 0
+
+        with tempfile.NamedTemporaryFile(
+            suffix=".pdf",
+            delete=False,
+        ) as temp_file:
+            temp_path = temp_file.name
+
+            while True:
+                chunk = await file.read(
+                    UPLOAD_READ_CHUNK_BYTES
+                )
+
+                if not chunk:
+                    break
+
+                total_bytes += len(chunk)
+
+                if (
+                    total_bytes
+                    > MAX_PDF_UPLOAD_BYTES
+                ):
+                    raise HTTPException(
+                        status_code=413,
+                        detail=(
+                            "Uploaded PDF exceeds "
+                            f"the {MAX_PDF_UPLOAD_MB} "
+                            "MiB size limit."
+                        ),
+                    )
+
+                temp_file.write(chunk)
+
+        if total_bytes == 0:
+            raise HTTPException(
+                status_code=400,
+                detail="Uploaded file is empty.",
+            )
+
+        with open(
+            temp_path,
+            "rb",
+        ) as pdf_file:
+            header = pdf_file.read(1024)
+
+        if b"%PDF-" not in header:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded file does not "
+                    "contain a valid PDF header."
+                ),
+            )
+
+        content_sha256 = (
+            calculate_file_sha256(
+                temp_path
+            )
+        )
+
+        if (
+            content_sha256
+            == document.content_sha256
+        ):
+            return {
+                "success": True,
+                "replaced": False,
+                "document_id": str(
+                    document.id
+                ),
+                "project_id": (
+                    document.project_id
+                ),
+                "source_name": (
+                    document.source_name
+                ),
+                "chunks_indexed": (
+                    document.chunks_indexed
+                ),
+                "message": (
+                    "Uploaded PDF is identical "
+                    "to the current document."
+                ),
+            }
+
+        existing = db.execute(
+            select(
+                KnowledgeBaseDocument
+            ).where(
+                KnowledgeBaseDocument.project_id
+                == document.project_id,
+                KnowledgeBaseDocument.content_sha256
+                == content_sha256,
+            )
+        ).scalar_one_or_none()
+
+        if existing is not None:
+            raise HTTPException(
+                status_code=409,
+                detail=(
+                    "This exact PDF is already "
+                    "indexed as another document "
+                    "in the project."
+                ),
+            )
+
+        try:
+            result = index_document(
+                file_path=temp_path,
+                project_id=document.project_id,
+                source_name=source_name,
+                document_id=str(
+                    new_document_id
+                ),
+            )
+
+        except InvalidPDFError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded PDF is invalid "
+                    "or corrupted."
+                ),
+            ) from exc
+
+        except Exception:
+            delete_vector_document(
+                project_id=document.project_id,
+                document_id=str(
+                    new_document_id
+                ),
+            )
+            raise
+
+        if not result.get(
+            "success"
+        ):
+            delete_vector_document(
+                project_id=document.project_id,
+                document_id=str(
+                    new_document_id
+                ),
+            )
+
+            raise HTTPException(
+                status_code=422,
+                detail=result.get(
+                    "message",
+                    (
+                        "Uploaded PDF could not "
+                        "be indexed."
+                    ),
+                ),
+            )
+
+        original_status = document.status
+
+        new_document = (
+            KnowledgeBaseDocument(
+                id=new_document_id,
+                project_id=(
+                    document.project_id
+                ),
+                source_name=source_name,
+                content_sha256=(
+                    content_sha256
+                ),
+                chunks_indexed=int(
+                    result[
+                        "chunks_indexed"
+                    ]
+                ),
+                status="STAGED",
+            )
+        )
+
+        document.status = "REPLACING"
+
+        try:
+            db.add(
+                new_document
+            )
+            db.commit()
+
+        except Exception:
+            db.rollback()
+            document.status = original_status
+
+            delete_vector_document(
+                project_id=document.project_id,
+                document_id=str(
+                    new_document_id
+                ),
+            )
+            raise
+
+        try:
+            delete_vector_document(
+                project_id=document.project_id,
+                document_id=str(
+                    document.id
+                ),
+            )
+
+        except Exception as exc:
+            try:
+                delete_vector_document(
+                    project_id=document.project_id,
+                    document_id=str(
+                        new_document_id
+                    ),
+                )
+            except Exception as cleanup_exc:
+                raise HTTPException(
+                    status_code=503,
+                    detail=(
+                        "Document replacement "
+                        "failed and vector rollback "
+                        "could not be completed."
+                    ),
+                ) from cleanup_exc
+
+            document.status = original_status
+
+            try:
+                db.delete(
+                    new_document
+                )
+                db.commit()
+            except Exception:
+                db.rollback()
+
+            raise HTTPException(
+                status_code=503,
+                detail=(
+                    "Failed to remove the old "
+                    "document from the vector "
+                    "store. The original document "
+                    "was retained."
+                ),
+            ) from exc
+
+        try:
+            db.delete(
+                document
+            )
+
+            new_document.status = "INDEXED"
+
+            db.commit()
+
+        except Exception as exc:
+            db.rollback()
+
+            raise HTTPException(
+                status_code=503,
+                detail=(
+                    "Replacement was indexed, "
+                    "but database finalization "
+                    "failed. The replacement "
+                    "remains staged for recovery."
+                ),
+            ) from exc
+
+        return {
+            "success": True,
+            "replaced": True,
+            "old_document_id": str(
+                document.id
+            ),
+            "document_id": str(
+                new_document.id
+            ),
+            "project_id": (
+                new_document.project_id
+            ),
+            "source_name": (
+                new_document.source_name
+            ),
+            "chunks_indexed": (
+                new_document.chunks_indexed
+            ),
+            "message": (
+                "Knowledge base document "
+                "replaced successfully."
+            ),
+        }
+
+    finally:
+        await file.close()
+
+        if (
+            temp_path
+            and os.path.exists(
+                temp_path
+            )
+        ):
+            os.remove(
+                temp_path
+            )
+
+
 @router.delete(
     "/documents/{document_id}"
 )
