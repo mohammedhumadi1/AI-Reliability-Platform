@@ -15,11 +15,12 @@ class GoldLabelValidationResult:
     unanimous: bool
     consensus_label: FailureLabel | None
     requires_adjudication: bool
+    adjudicator_id: str | None = None
+    adjudicated_label: FailureLabel | None = None
 
 
 def validate_gold_label_sample(
     sample: ValidationSample,
-    adjudicator_id: str | None = None,
     minimum_reviewers: int = 2,
 ) -> GoldLabelValidationResult:
     if minimum_reviewers < 2:
@@ -85,22 +86,24 @@ def validate_gold_label_sample(
             requires_adjudication=False,
         )
 
-    cleaned_adjudicator = (
-        adjudicator_id.strip()
-        if adjudicator_id
-        else ""
-    )
+    adjudication = sample.adjudication
 
-    if not cleaned_adjudicator:
+    if adjudication is None:
         raise ValueError(
             f"Sample {sample.sample_id} has reviewer "
             "disagreement and requires adjudication."
         )
 
-    if cleaned_adjudicator in reviewer_ids:
+    if adjudication.adjudicator_id in reviewer_ids:
         raise ValueError(
             "The adjudicator must be independent from "
             "the original reviewers."
+        )
+
+    if adjudication.label != sample.gold_label:
+        raise ValueError(
+            f"Sample {sample.sample_id} gold label "
+            "does not match adjudicator decision."
         )
 
     return GoldLabelValidationResult(
@@ -109,12 +112,17 @@ def validate_gold_label_sample(
         unanimous=False,
         consensus_label=None,
         requires_adjudication=True,
+        adjudicator_id=(
+            adjudication.adjudicator_id
+        ),
+        adjudicated_label=(
+            adjudication.label
+        ),
     )
 
 
 def validate_gold_dataset(
     samples: list[ValidationSample],
-    adjudicators: dict[str, str] | None = None,
     minimum_reviewers: int = 2,
 ) -> list[GoldLabelValidationResult]:
     if not samples:
@@ -132,14 +140,9 @@ def validate_gold_dataset(
             "Gold dataset sample IDs must be unique."
         )
 
-    adjudicators = adjudicators or {}
-
     return [
         validate_gold_label_sample(
             sample,
-            adjudicator_id=adjudicators.get(
-                sample.sample_id
-            ),
             minimum_reviewers=minimum_reviewers,
         )
         for sample in samples

@@ -1,6 +1,7 @@
 import pytest
 
 from benchmarks.validation_schema import (
+    Adjudication,
     FailureLabel,
     ReviewerAnnotation,
     SupportedLanguage,
@@ -152,5 +153,32 @@ def test_reviewer_annotation_rejects_empty_id() -> None:
     ):
         ReviewerAnnotation(
             reviewer_id=" ",
+            label=FailureLabel.HEALTHY,
+        )
+
+
+
+def test_adjudication_cleans_metadata() -> None:
+    adjudication = Adjudication(
+        adjudicator_id=" reviewer-c ",
+        label=FailureLabel.GENERATION_FAILURE,
+        notes=" final decision ",
+    )
+
+    assert adjudication.adjudicator_id == "reviewer-c"
+    assert (
+        adjudication.label
+        == FailureLabel.GENERATION_FAILURE
+    )
+    assert adjudication.notes == "final decision"
+
+
+def test_adjudication_rejects_empty_id() -> None:
+    with pytest.raises(
+        ValueError,
+        match="adjudicator_id cannot be empty",
+    ):
+        Adjudication(
+            adjudicator_id=" ",
             label=FailureLabel.HEALTHY,
         )

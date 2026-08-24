@@ -62,6 +62,10 @@ prompt failure.
 7. Reviewer annotations and adjudication metadata are retained with the
    benchmark record.
 
+Adjudication metadata includes the independent adjudicator identity, the final
+adjudicated label, and optional notes. When reviewers disagree, validation
+requires the stored gold label to match the adjudicator's recorded decision.
+
 The software can validate this process, but it cannot replace the required
 human independent review.
 
@@ -74,6 +78,11 @@ Gold samples are split deterministically and stratified by failure label.
 - Held-out data must not be used for threshold selection or rule tuning.
 - Sample IDs must not overlap between the two splits.
 - Final reported performance must be calculated on the frozen held-out set.
+
+Benchmark-wide diversity requirements should be checked on the complete
+benchmark with `validate_benchmark_coverage` before split-specific reporting.
+The split report intentionally summarizes its own coverage without reapplying
+whole-benchmark diversity requirements.
 
 ## Current semantic model
 

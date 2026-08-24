@@ -53,6 +53,36 @@ class ReviewerAnnotation:
 
 
 @dataclass(frozen=True)
+class Adjudication:
+    adjudicator_id: str
+    label: FailureLabel
+    notes: str | None = None
+
+    def __post_init__(self) -> None:
+        adjudicator_id = self.adjudicator_id.strip()
+
+        if not adjudicator_id:
+            raise ValueError(
+                "adjudicator_id cannot be empty."
+            )
+
+        object.__setattr__(
+            self,
+            "adjudicator_id",
+            adjudicator_id,
+        )
+
+        if self.notes is not None:
+            notes = self.notes.strip()
+
+            object.__setattr__(
+                self,
+                "notes",
+                notes or None,
+            )
+
+
+@dataclass(frozen=True)
 class ValidationSample:
     sample_id: str
     split: ValidationSplit
@@ -71,6 +101,7 @@ class ValidationSample:
         ReviewerAnnotation,
         ...
     ] = ()
+    adjudication: Adjudication | None = None
 
     def __post_init__(self) -> None:
         text_fields = {

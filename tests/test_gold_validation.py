@@ -5,6 +5,7 @@ from benchmarks.gold_validation import (
     validate_gold_label_sample,
 )
 from benchmarks.validation_schema import (
+    Adjudication,
     FailureLabel,
     ReviewerAnnotation,
     SupportedLanguage,
@@ -18,8 +19,9 @@ def _sample(
     gold_label: FailureLabel,
     reviewer_labels: tuple[
         FailureLabel,
-        ...,
+        ...
     ],
+    adjudication: Adjudication | None = None,
 ) -> ValidationSample:
     return ValidationSample(
         sample_id=sample_id,
@@ -40,6 +42,7 @@ def _sample(
                 start=1,
             )
         ),
+        adjudication=adjudication,
     )
 
 
@@ -64,6 +67,8 @@ def test_unanimous_reviewers_validate_gold_label() -> None:
         == FailureLabel.GENERATION_FAILURE
     )
     assert result.requires_adjudication is False
+    assert result.adjudicator_id is None
+    assert result.adjudicated_label is None
 
 
 def test_unanimous_reviewers_must_match_gold_label() -> None:
@@ -112,16 +117,24 @@ def test_independent_adjudicator_resolves_disagreement() -> None:
             FailureLabel.GENERATION_FAILURE,
             FailureLabel.RETRIEVAL_FAILURE,
         ),
+        adjudication=Adjudication(
+            adjudicator_id="reviewer-3",
+            label=FailureLabel.GENERATION_FAILURE,
+        ),
     )
 
     result = validate_gold_label_sample(
-        sample,
-        adjudicator_id="reviewer-3",
+        sample
     )
 
     assert result.unanimous is False
     assert result.consensus_label is None
     assert result.requires_adjudication is True
+    assert result.adjudicator_id == "reviewer-3"
+    assert (
+        result.adjudicated_label
+        == FailureLabel.GENERATION_FAILURE
+    )
 
 
 def test_adjudicator_must_be_independent() -> None:
@@ -132,6 +145,10 @@ def test_adjudicator_must_be_independent() -> None:
             FailureLabel.GENERATION_FAILURE,
             FailureLabel.RETRIEVAL_FAILURE,
         ),
+        adjudication=Adjudication(
+            adjudicator_id="reviewer-1",
+            label=FailureLabel.GENERATION_FAILURE,
+        ),
     )
 
     with pytest.raises(
@@ -139,8 +156,30 @@ def test_adjudicator_must_be_independent() -> None:
         match="independent",
     ):
         validate_gold_label_sample(
-            sample,
-            adjudicator_id="reviewer-1",
+            sample
+        )
+
+
+def test_adjudicator_label_must_match_gold_label() -> None:
+    sample = _sample(
+        "sample-adjudication-mismatch",
+        FailureLabel.GENERATION_FAILURE,
+        (
+            FailureLabel.GENERATION_FAILURE,
+            FailureLabel.RETRIEVAL_FAILURE,
+        ),
+        adjudication=Adjudication(
+            adjudicator_id="reviewer-3",
+            label=FailureLabel.RETRIEVAL_FAILURE,
+        ),
+    )
+
+    with pytest.raises(
+        ValueError,
+        match="does not match adjudicator",
+    ):
+        validate_gold_label_sample(
+            sample
         )
 
 
@@ -179,13 +218,18 @@ def test_gold_dataset_rejects_duplicate_ids() -> None:
         )
 
 
-def test_gold_dataset_uses_adjudicator_mapping() -> None:
+def test_gold_dataset_uses_persisted_adjudication() -> None:
     base = _sample(
         "sample-8",
         FailureLabel.PROMPT_FAILURE,
         (
             FailureLabel.PROMPT_FAILURE,
             FailureLabel.GENERATION_FAILURE,
+        ),
+        adjudication=Adjudication(
+            adjudicator_id="reviewer-3",
+            label=FailureLabel.PROMPT_FAILURE,
+            notes="Prompt evidence supports the final label.",
         ),
     )
 
@@ -200,17 +244,20 @@ def test_gold_dataset_uses_adjudicator_mapping() -> None:
         contexts=base.contexts,
         prompt="Answer only from the supplied context.",
         reviewers=base.reviewers,
+        adjudication=base.adjudication,
     )
 
     results = validate_gold_dataset(
-        [sample],
-        adjudicators={
-            "sample-8": "reviewer-3",
-        },
+        [sample]
     )
 
     assert len(results) == 1
     assert results[0].requires_adjudication is True
+    assert results[0].adjudicator_id == "reviewer-3"
+    assert (
+        results[0].adjudicated_label
+        == FailureLabel.PROMPT_FAILURE
+    )
 
 
 def test_prompt_failure_requires_prompt_evidence() -> None:
