@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import os
-import shutil
 import tempfile
 import uuid
 
@@ -23,6 +22,9 @@ from app.models import (
 from app.schemas.evaluation_result import (
     KnowledgeBaseVerificationResponse,
 )
+from knowledge_base.document_loader import (
+    InvalidPDFError,
+)
 from knowledge_base.indexing_service import (
     calculate_file_sha256,
     index_document,
@@ -41,6 +43,39 @@ router = APIRouter(
 )
 
 
+def _load_max_pdf_upload_mb() -> int:
+    raw_value = os.getenv(
+        "KB_MAX_UPLOAD_MB",
+        "20",
+    ).strip()
+
+    try:
+        value = int(raw_value)
+    except ValueError as exc:
+        raise RuntimeError(
+            "KB_MAX_UPLOAD_MB must be a positive integer."
+        ) from exc
+
+    if value <= 0:
+        raise RuntimeError(
+            "KB_MAX_UPLOAD_MB must be a positive integer."
+        )
+
+    return value
+
+
+MAX_PDF_UPLOAD_MB = _load_max_pdf_upload_mb()
+MAX_PDF_UPLOAD_BYTES = (
+    MAX_PDF_UPLOAD_MB * 1024 * 1024
+)
+UPLOAD_READ_CHUNK_BYTES = 1024 * 1024
+ALLOWED_PDF_CONTENT_TYPES = {
+    "application/pdf",
+    "application/x-pdf",
+    "application/octet-stream",
+}
+
+
 @router.post("/upload")
 async def upload_document(
     project_id: str = Form(...),
@@ -49,46 +84,117 @@ async def upload_document(
 ) -> dict:
     clean_project_id = project_id.strip()
 
-    if not clean_project_id:
-        raise HTTPException(
-            status_code=400,
-            detail="project_id cannot be empty.",
+    try:
+        if not clean_project_id:
+            raise HTTPException(
+                status_code=400,
+                detail="project_id cannot be empty.",
+            )
+
+        raw_source_name = (
+            file.filename
+            or "uploaded.pdf"
         )
 
-    source_name = (
-        file.filename
-        or "uploaded.pdf"
-    )
-
-    if not source_name.lower().endswith(
-        ".pdf"
-    ):
-        raise HTTPException(
-            status_code=400,
-            detail=(
-                "Only PDF files are currently "
-                "supported."
-            ),
+        source_name = (
+            raw_source_name
+            .replace("\\", "/")
+            .split("/")[-1]
+            .strip()
+            or "uploaded.pdf"
         )
+
+        if not source_name.lower().endswith(
+            ".pdf"
+        ):
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Only PDF files are currently "
+                    "supported."
+                ),
+            )
+
+        content_type = (
+            file.content_type
+            or ""
+        ).split(
+            ";",
+            1,
+        )[0].strip().lower()
+
+        if (
+            content_type
+            not in ALLOWED_PDF_CONTENT_TYPES
+        ):
+            raise HTTPException(
+                status_code=415,
+                detail=(
+                    "Unsupported media type. "
+                    "Upload a PDF file."
+                ),
+            )
+
+    except Exception:
+        await file.close()
+        raise
 
     temp_path = None
     document_id = uuid.uuid4()
 
     try:
+        total_bytes = 0
+
         with tempfile.NamedTemporaryFile(
             suffix=".pdf",
             delete=False,
         ) as temp_file:
-            shutil.copyfileobj(
-                file.file,
-                temp_file,
-            )
             temp_path = temp_file.name
 
-        if os.path.getsize(temp_path) == 0:
+            while True:
+                chunk = await file.read(
+                    UPLOAD_READ_CHUNK_BYTES
+                )
+
+                if not chunk:
+                    break
+
+                total_bytes += len(chunk)
+
+                if (
+                    total_bytes
+                    > MAX_PDF_UPLOAD_BYTES
+                ):
+                    raise HTTPException(
+                        status_code=413,
+                        detail=(
+                            "Uploaded PDF exceeds "
+                            f"the {MAX_PDF_UPLOAD_MB} "
+                            "MiB size limit."
+                        ),
+                    )
+
+                temp_file.write(chunk)
+
+        if total_bytes == 0:
             raise HTTPException(
                 status_code=400,
                 detail="Uploaded file is empty.",
+            )
+
+        with open(
+            temp_path,
+            "rb",
+        ) as pdf_file:
+            header = pdf_file.read(1024)
+
+        if b"%PDF-" not in header:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded file does not "
+                    "contain a valid PDF header."
+                ),
             )
 
         content_sha256 = (
@@ -125,19 +231,54 @@ async def upload_document(
                 ),
             }
 
-        result = index_document(
-            file_path=temp_path,
-            project_id=clean_project_id,
-            source_name=source_name,
-            document_id=str(
-                document_id
-            ),
-        )
+        try:
+            result = index_document(
+                file_path=temp_path,
+                project_id=clean_project_id,
+                source_name=source_name,
+                document_id=str(
+                    document_id
+                ),
+            )
+
+        except InvalidPDFError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail=(
+                    "Uploaded PDF is invalid "
+                    "or corrupted."
+                ),
+            ) from exc
+
+        except Exception:
+            delete_vector_document(
+                project_id=clean_project_id,
+                document_id=str(
+                    document_id
+                ),
+            )
+            raise
 
         if not result.get(
             "success"
         ):
-            return result
+            delete_vector_document(
+                project_id=clean_project_id,
+                document_id=str(
+                    document_id
+                ),
+            )
+
+            raise HTTPException(
+                status_code=422,
+                detail=result.get(
+                    "message",
+                    (
+                        "Uploaded PDF could not "
+                        "be indexed."
+                    ),
+                ),
+            )
 
         db_document = (
             KnowledgeBaseDocument(
