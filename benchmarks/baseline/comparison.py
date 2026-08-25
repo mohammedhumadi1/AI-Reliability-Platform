@@ -133,6 +133,103 @@ def _metric_deltas(
     return deltas
 
 
+def build_platform_value_add(
+    *,
+    result: EvaluationPipelineResult,
+    verification: VerificationResult,
+    prompt: str | None = None,
+) -> PlatformValueAdd:
+    """
+    Calculate reliability value-add for one
+    evaluation result and KB verification.
+
+    The helper reuses the same root-cause,
+    health-score, and recommendation components
+    used by the reliability platform.
+    """
+    root_cause_metrics = (
+        build_root_cause_metrics(
+            result=result,
+            verification=verification,
+            prompt=prompt,
+        )
+    )
+
+    diagnosis = run_rules_pipeline(
+        root_cause_metrics
+    )
+
+    health = calculate_health_score(
+        {
+            "faithfulness": (
+                result.faithfulness_score
+            ),
+            "answer_relevancy": (
+                result.answer_relevancy_score
+            ),
+            "answer_correctness": (
+                result.correctness_score
+            ),
+            "context_precision": (
+                result.context_precision_score
+            ),
+            "context_recall": (
+                result.context_recall_score
+            ),
+            "knowledge_base_support": (
+                verification.health_score_component
+            ),
+        }
+    )
+
+    recommendations = (
+        generate_recommendations(
+            diagnosis
+        )
+    )
+
+    return PlatformValueAdd(
+        verification_status=(
+            verification.status
+        ),
+        kb_evidence_found=(
+            verification.evidence_found
+        ),
+        knowledge_base_support=(
+            verification.health_score_component
+        ),
+        diagnosis_category=(
+            diagnosis.get("category")
+            if diagnosis
+            else None
+        ),
+        diagnosis_subcategory=(
+            diagnosis.get("subcategory")
+            if diagnosis
+            else None
+        ),
+        diagnosis_severity=(
+            diagnosis.get("severity")
+            if diagnosis
+            else None
+        ),
+        diagnosis_confidence=(
+            diagnosis.get("confidence")
+            if diagnosis
+            else None
+        ),
+        health_score=health.score,
+        health_status=health.status,
+        recommendation_count=len(
+            recommendations
+        ),
+        recommendation_actions=tuple(
+            item.action
+            for item in recommendations
+        ),
+    )
+
+
 def compare_base_rag_with_platform(
     *,
     project_id: str,
@@ -175,44 +272,11 @@ def compare_base_rag_with_platform(
         )
     )
 
-    root_cause_metrics = (
-        build_root_cause_metrics(
+    platform_value = (
+        build_platform_value_add(
             result=full_result,
             verification=verification,
             prompt=prompt,
-        )
-    )
-
-    diagnosis = run_rules_pipeline(
-        root_cause_metrics
-    )
-
-    health = calculate_health_score(
-        {
-            "faithfulness": (
-                full_result.faithfulness_score
-            ),
-            "answer_relevancy": (
-                full_result.answer_relevancy_score
-            ),
-            "answer_correctness": (
-                full_result.correctness_score
-            ),
-            "context_precision": (
-                full_result.context_precision_score
-            ),
-            "context_recall": (
-                full_result.context_recall_score
-            ),
-            "knowledge_base_support": (
-                verification.health_score_component
-            ),
-        }
-    )
-
-    recommendations = (
-        generate_recommendations(
-            diagnosis
         )
     )
 
@@ -231,46 +295,5 @@ def compare_base_rag_with_platform(
             base_metrics,
             full_metrics,
         ),
-        platform_value_add=(
-            PlatformValueAdd(
-                verification_status=(
-                    verification.status
-                ),
-                kb_evidence_found=(
-                    verification.evidence_found
-                ),
-                knowledge_base_support=(
-                    verification.health_score_component
-                ),
-                diagnosis_category=(
-                    diagnosis.get("category")
-                    if diagnosis
-                    else None
-                ),
-                diagnosis_subcategory=(
-                    diagnosis.get("subcategory")
-                    if diagnosis
-                    else None
-                ),
-                diagnosis_severity=(
-                    diagnosis.get("severity")
-                    if diagnosis
-                    else None
-                ),
-                diagnosis_confidence=(
-                    diagnosis.get("confidence")
-                    if diagnosis
-                    else None
-                ),
-                health_score=health.score,
-                health_status=health.status,
-                recommendation_count=len(
-                    recommendations
-                ),
-                recommendation_actions=tuple(
-                    item.action
-                    for item in recommendations
-                ),
-            )
-        ),
+        platform_value_add=platform_value,
     )

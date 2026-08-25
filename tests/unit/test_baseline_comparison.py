@@ -6,6 +6,7 @@ from knowledge_base.verification_agent import (
 )
 
 from benchmarks.baseline.comparison import (
+    build_platform_value_add,
     compare_base_rag_with_platform,
 )
 
@@ -210,3 +211,38 @@ def test_missing_context_recall_stays_unavailable():
         ]
         is None
     )
+
+
+def test_platform_value_builder_uses_verified_evidence():
+    value = build_platform_value_add(
+        result=make_evaluation(),
+        verification=make_verification(
+            status="UNSUPPORTED",
+            context_alignment=0.8,
+            answer_support=0.3,
+        ),
+    )
+
+    assert (
+        value.verification_status
+        == "UNSUPPORTED"
+    )
+    assert value.kb_evidence_found is True
+    assert (
+        value.knowledge_base_support
+        == 0.3
+    )
+    assert (
+        value.diagnosis_category
+        == "GENERATION_FAILURE"
+    )
+    assert (
+        value.diagnosis_subcategory
+        == "VERIFIED_UNSUPPORTED_ANSWER"
+    )
+    assert (
+        value.diagnosis_confidence
+        == 0.97
+    )
+    assert value.recommendation_count == 3
+    assert 0 <= value.health_score <= 100
