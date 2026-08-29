@@ -20,7 +20,10 @@ from app.schemas.evaluation_result import (
     RecommendationResponse,
 )
 from app.schemas.health_check import HealthCheckRequest
-from evaluation.pipeline import run_evaluation
+from evaluation.pipeline import (
+    EvaluationPipelineResult,
+    run_evaluation,
+)
 from evaluation.versioning import (
     EMBEDDING_MODEL_NAME,
     EVALUATION_VERSION,
@@ -36,6 +39,9 @@ from recommendation_engine.engine import (
 )
 from reporting.health_score import (
     calculate_health_score,
+)
+from root_cause.prompt_evidence import (
+    analyze_prompt_evidence,
 )
 from root_cause.rules.pipeline import (
     run_rules_pipeline,
@@ -74,6 +80,50 @@ def build_verification_response(
     )
 
 
+def build_root_cause_metrics(
+    result: EvaluationPipelineResult,
+    verification: VerificationResult,
+    prompt: str | None,
+) -> dict:
+    """Build evidence-aware metrics for root-cause diagnosis."""
+    metrics = {
+        "context_precision": (
+            result.context_precision_score
+        ),
+        "faithfulness": (
+            result.faithfulness_score
+        ),
+        "answer_relevancy": (
+            result.answer_relevancy_score
+        ),
+        "verification_status": (
+            verification.status
+        ),
+        "context_alignment_score": (
+            verification.context_alignment_score
+        ),
+        "verification_explanation": (
+            verification.explanation
+        ),
+    }
+
+    if result.context_recall_score is not None:
+        metrics["context_recall"] = (
+            result.context_recall_score
+        )
+
+    prompt_evidence = analyze_prompt_evidence(
+        prompt
+    )
+
+    if prompt_evidence is not None:
+        metrics["prompt_evidence"] = (
+            prompt_evidence
+        )
+
+    return metrics
+
+
 def execute_health_check(
     payload: HealthCheckRequest,
     db: Session,
@@ -103,34 +153,11 @@ def execute_health_check(
 
     # 3) Root cause. Direct KB evidence has
     # priority when it is available.
-    root_cause_metrics = {
-        "context_precision": (
-            result.context_precision_score
-        ),
-        "faithfulness": (
-            result.faithfulness_score
-        ),
-        "answer_relevancy": (
-            result.answer_relevancy_score
-        ),
-        "verification_status": (
-            verification.status
-        ),
-        "context_alignment_score": (
-            verification.context_alignment_score
-        ),
-        "verification_explanation": (
-            verification.explanation
-        ),
-    }
-
-    if (
-        result.context_recall_score
-        is not None
-    ):
-        root_cause_metrics[
-            "context_recall"
-        ] = result.context_recall_score
+    root_cause_metrics = build_root_cause_metrics(
+        result=result,
+        verification=verification,
+        prompt=payload.prompt,
+    )
 
     diagnosis_dict = run_rules_pipeline(
         root_cause_metrics

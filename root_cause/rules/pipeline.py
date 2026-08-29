@@ -110,6 +110,11 @@ def run_rules_pipeline(
                 answer_relevancy=(
                     answer_relevancy
                 ),
+                prompt_evidence=(
+                    metrics.get(
+                        "prompt_evidence"
+                    )
+                ),
             )
         )
 

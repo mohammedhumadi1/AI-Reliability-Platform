@@ -54,7 +54,7 @@ def test_pipeline_detects_knowledge_base_gap() -> None:
     )
 
 
-def test_pipeline_detects_prompt_failure() -> None:
+def test_pipeline_does_not_infer_prompt_failure_without_evidence() -> None:
     metrics = {
         "context_precision": 0.80,
         "faithfulness": 0.80,
@@ -64,10 +64,35 @@ def test_pipeline_detects_prompt_failure() -> None:
 
     result = run_rules_pipeline(metrics)
 
+    assert result is None
+
+
+def test_pipeline_detects_prompt_failure_with_direct_evidence() -> None:
+    metrics = {
+        "context_precision": 0.80,
+        "faithfulness": 0.80,
+        "context_recall": 0.90,
+        "answer_relevancy": 0.20,
+        "prompt_evidence": {
+            "issue_code": "CONFLICTING_INSTRUCTIONS",
+            "explanation": (
+                "The prompt contains mutually conflicting "
+                "instructions."
+            ),
+            "confidence": 0.95,
+        },
+    }
+
+    result = run_rules_pipeline(metrics)
+
     assert result is not None
     assert (
         result["category"]
         == "PROMPT_FAILURE"
+    )
+    assert (
+        result["subcategory"]
+        == "CONFLICTING_INSTRUCTIONS"
     )
 
 
