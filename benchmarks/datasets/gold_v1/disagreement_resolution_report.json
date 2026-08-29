@@ -1,0 +1,121 @@
+{
+  "resolution_method": "deterministic_source_knowledge_rule_v1",
+  "rule": {
+    "RETRIEVAL_FAILURE": "Required fact exists in authoritative source knowledge but is absent from retrieved contexts.",
+    "KNOWLEDGE_BASE_FAILURE": "Required fact does not exist in authoritative source knowledge."
+  },
+  "total_samples": 50,
+  "reviewer_agreements": 38,
+  "reviewer_disagreements": 12,
+  "resolved_disagreements": 12,
+  "resolved_details": [
+    {
+      "candidate_id": "candidate_004",
+      "sample_id": "gold-customer-returns-en-008-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolved_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Return-shipping cost policy is not present in the source knowledge."
+    },
+    {
+      "candidate_id": "candidate_005",
+      "sample_id": "gold-it-support-en-002-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolved_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Required browser for the VPN portal is not present in the source knowledge."
+    },
+    {
+      "candidate_id": "candidate_006",
+      "sample_id": "gold-it-support-ar-003-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolved_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Required browser for the VPN portal is not present in the source knowledge."
+    },
+    {
+      "candidate_id": "candidate_018",
+      "sample_id": "gold-it-support-ar-003-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Standard support hours exist in source knowledge but are missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_024",
+      "sample_id": "gold-customer-returns-ar-003-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Damaged-item reporting period exists in source knowledge but is missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_025",
+      "sample_id": "gold-customer-returns-ar-007-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolved_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Exchange-instead-of-return policy is not present in the source knowledge."
+    },
+    {
+      "candidate_id": "candidate_031",
+      "sample_id": "gold-it-support-en-000-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolved_label": "KNOWLEDGE_BASE_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Weekend IT support availability is not present in the source knowledge."
+    },
+    {
+      "candidate_id": "candidate_033",
+      "sample_id": "gold-travel-expense-en-002-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Riyadh hotel reimbursement cap exists in source knowledge but is missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_035",
+      "sample_id": "gold-it-support-en-000-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Password reset link validity exists in source knowledge but is missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_042",
+      "sample_id": "gold-it-support-en-002-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Critical-incident escalation timing exists in source knowledge but is missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_047",
+      "sample_id": "gold-it-support-ar-001-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "VPN MFA requirement exists in source knowledge but is missing from retrieved contexts."
+    },
+    {
+      "candidate_id": "candidate_049",
+      "sample_id": "gold-customer-returns-ar-001-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE",
+      "resolved_label": "RETRIEVAL_FAILURE",
+      "resolution_method": "deterministic_source_knowledge_rule_v1",
+      "reason": "Approved refund timing exists in source knowledge but is missing from retrieved contexts."
+    }
+  ]
+}

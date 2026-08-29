@@ -20,6 +20,7 @@ from benchmarks.validation_coverage import (
     validate_benchmark_coverage,
 )
 from benchmarks.gold_validation import validate_gold_dataset
+from benchmarks.validation_split import validate_no_split_leakage
 
 BASE_DIR = Path(__file__).parent
 SAMPLES_PATH = BASE_DIR / "samples_all.json"
@@ -60,6 +61,7 @@ def build_sample(raw: dict) -> ValidationSample:
         prompt=raw.get("prompt"),
         reviewers=reviewers,
         adjudication=adjudication,
+        source_fact_id=raw.get("source_fact_id"),
     )
 
 
@@ -93,12 +95,37 @@ def main() -> None:
     except ValueError as e:
         print(f"FAILED coverage validation: {e}")
 
-    print("\n=== Gold Label Validation (expected to fail — pre-review) ===")
+    print("\n=== Gold Label Validation ===")
     try:
         validate_gold_dataset(samples)
         print("PASSED gold label validation.")
     except ValueError as e:
-        print(f"EXPECTED FAILURE (human review not done yet): {e}")
+        print(f"FAILED gold label validation: {e}")
+
+    print("\n=== Split Leakage Validation ===")
+    development = [
+        sample
+        for sample in samples
+        if sample.split == ValidationSplit.DEVELOPMENT
+    ]
+    held_out = [
+        sample
+        for sample in samples
+        if sample.split == ValidationSplit.HELD_OUT
+    ]
+
+    try:
+        validate_no_split_leakage(
+            development,
+            held_out,
+        )
+        print(
+            "PASSED split leakage validation "
+            f"(development={len(development)}, "
+            f"held_out={len(held_out)})."
+        )
+    except ValueError as e:
+        print(f"FAILED split leakage validation: {e}")
 
 
 if __name__ == "__main__":

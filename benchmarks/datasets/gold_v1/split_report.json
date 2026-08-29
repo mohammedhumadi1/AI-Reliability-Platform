@@ -1,0 +1,23 @@
+{
+  "seed": 20260824,
+  "development_fraction": 0.7,
+  "total_samples": 50,
+  "development_samples": 35,
+  "held_out_samples": 15,
+  "development_label_counts": {
+    "GENERATION_FAILURE": 7,
+    "HEALTHY": 7,
+    "KNOWLEDGE_BASE_FAILURE": 7,
+    "PROMPT_FAILURE": 7,
+    "RETRIEVAL_FAILURE": 7
+  },
+  "held_out_label_counts": {
+    "GENERATION_FAILURE": 3,
+    "HEALTHY": 3,
+    "KNOWLEDGE_BASE_FAILURE": 3,
+    "PROMPT_FAILURE": 3,
+    "RETRIEVAL_FAILURE": 3
+  },
+  "source_fact_id_overlap": [],
+  "leakage_validation": "PASSED"
+}
