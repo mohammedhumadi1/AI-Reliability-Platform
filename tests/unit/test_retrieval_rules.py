@@ -134,3 +134,22 @@ def test_verified_knowledge_gap_does_not_trigger_when_supported():
         explanation="Found in document.",
     )
     assert result is None
+
+
+
+def test_prompt_failure_can_trigger_when_answer_remains_topically_relevant():
+    result = check_prompt_failure(
+        context_precision=0.85,
+        answer_relevancy=0.85,
+        prompt_evidence={
+            "issue_code": "CONFLICTING_INSTRUCTIONS",
+            "explanation": (
+                "The prompt instructs the model to add "
+                "information outside the supplied context."
+            ),
+            "confidence": 0.95,
+        },
+    )
+
+    assert result is not None
+    assert result["category"] == "PROMPT_FAILURE"

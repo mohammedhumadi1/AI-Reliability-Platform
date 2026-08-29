@@ -133,3 +133,49 @@ def test_pipeline_prioritizes_retrieval_over_hallucination() -> None:
         result["category"]
         == "RETRIEVAL_FAILURE"
     )
+
+
+
+def test_pipeline_prompt_evidence_can_precede_verified_generation_symptom():
+    metrics = {
+        "verification_status": "CONTRADICTED",
+        "context_alignment_score": 1.0,
+        "verification_explanation": (
+            "The answer conflicts with company evidence."
+        ),
+        "context_precision": 0.80,
+        "faithfulness": 0.20,
+        "context_recall": 0.90,
+        "answer_relevancy": 0.80,
+        "prompt_evidence": {
+            "issue_code": "CONFLICTING_INSTRUCTIONS",
+            "explanation": (
+                "The prompt explicitly requests outside "
+                "information despite context-only grounding."
+            ),
+            "confidence": 0.95,
+        },
+    }
+
+    result = run_rules_pipeline(metrics)
+
+    assert result is not None
+    assert result["category"] == "PROMPT_FAILURE"
+
+
+def test_pipeline_supported_kb_does_not_become_proxy_knowledge_gap():
+    metrics = {
+        "verification_status": "SUPPORTED",
+        "context_alignment_score": 1.0,
+        "verification_explanation": (
+            "Independent company evidence supports the answer."
+        ),
+        "context_precision": 0.85,
+        "faithfulness": 0.95,
+        "context_recall": 0.20,
+        "answer_relevancy": 0.90,
+    }
+
+    result = run_rules_pipeline(metrics)
+
+    assert result is None
