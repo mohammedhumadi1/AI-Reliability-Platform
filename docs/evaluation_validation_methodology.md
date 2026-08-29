@@ -80,12 +80,21 @@ metadata. This does not replace the two independent reviewer judgments.
 
 ## Development and held-out separation
 
-Gold samples are split deterministically and stratified by failure label.
+Gold samples are split deterministically using a group-aware 70/30 procedure
+with seed `20260824`.
+
+Samples sharing the same `source_fact_id` are treated as one group so that the
+same underlying source fact cannot appear in both development and held-out
+data, even when it is used to construct different failure labels.
 
 - Development data may be used for threshold calibration and diagnosis-rule
   tuning.
 - Held-out data must not be used for threshold selection or rule tuning.
 - Sample IDs must not overlap between the two splits.
+- `source_fact_id` values must not overlap between the two splits.
+- The target development fraction is 70%, subject to group-integrity
+  constraints.
+- Each failure label must remain represented in both splits.
 - Final reported performance must be calculated on the frozen held-out set.
 
 Benchmark-wide diversity requirements should be checked on the complete
