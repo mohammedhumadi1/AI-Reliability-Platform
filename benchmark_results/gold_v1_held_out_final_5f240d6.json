@@ -1,0 +1,339 @@
+{
+  "split": "held_out",
+  "sample_count": 15,
+  "accuracy": 0.8666666666666667,
+  "macro_f1": 0.8628571428571428,
+  "weighted_f1": 0.8628571428571429,
+  "labels": [
+    "HEALTHY",
+    "RETRIEVAL_FAILURE",
+    "GENERATION_FAILURE",
+    "KNOWLEDGE_BASE_FAILURE",
+    "PROMPT_FAILURE"
+  ],
+  "confusion_matrix": [
+    [
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      0,
+      2
+    ]
+  ],
+  "per_class": {
+    "HEALTHY": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 3
+    },
+    "RETRIEVAL_FAILURE": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 3
+    },
+    "GENERATION_FAILURE": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571428571428571,
+      "support": 3
+    },
+    "KNOWLEDGE_BASE_FAILURE": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    },
+    "PROMPT_FAILURE": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8,
+      "support": 3
+    }
+  },
+  "coverage": {
+    "sample_count": 15,
+    "by_label": {
+      "GENERATION_FAILURE": 3,
+      "KNOWLEDGE_BASE_FAILURE": 3,
+      "HEALTHY": 3,
+      "PROMPT_FAILURE": 3,
+      "RETRIEVAL_FAILURE": 3
+    },
+    "by_language": {
+      "en": 11,
+      "ar": 4
+    },
+    "by_domain": {
+      "customer_returns": 2,
+      "it_support": 12,
+      "travel_expense": 1
+    },
+    "by_model": {
+      "groq/qwen/qwen3.6-27b": 7,
+      "groq/openai/gpt-oss-20b": 8
+    },
+    "by_retriever": {
+      "chroma_minilm_topk1": 12,
+      "chroma_minilm_topk3": 3
+    },
+    "by_split": {
+      "held_out": 15
+    }
+  },
+  "reviewer_agreements": [
+    {
+      "reviewer_a": "mohammed_reviewer",
+      "reviewer_b": "sara_reviewer",
+      "sample_count": 15,
+      "observed_agreement": 0.6666666666666666,
+      "expected_agreement": 0.20000000000000004,
+      "cohen_kappa": 0.5833333333333333
+    }
+  ],
+  "schema_version": "gold_root_cause_evaluation_v1",
+  "calibration_rules_sha": "33559c1bf77ef3116a9ca30ee8359f078276bee8",
+  "git": {
+    "commit_sha": "5f240d68c69e8882f258e3b0e933e99f4a35857d",
+    "working_tree_clean": true
+  },
+  "predictions": [
+    {
+      "sample_id": "gold-customer-returns-en-000-generation-failure",
+      "gold_label": "GENERATION_FAILURE",
+      "predicted_label": "GENERATION_FAILURE",
+      "language": "en",
+      "domain": "customer_returns"
+    },
+    {
+      "sample_id": "gold-customer-returns-en-008-kb-failure",
+      "gold_label": "KNOWLEDGE_BASE_FAILURE",
+      "predicted_label": "KNOWLEDGE_BASE_FAILURE",
+      "language": "en",
+      "domain": "customer_returns"
+    },
+    {
+      "sample_id": "gold-it-support-ar-003-healthy",
+      "gold_label": "HEALTHY",
+      "predicted_label": "HEALTHY",
+      "language": "ar",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-ar-003-kb-failure",
+      "gold_label": "KNOWLEDGE_BASE_FAILURE",
+      "predicted_label": "GENERATION_FAILURE",
+      "language": "ar",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-ar-003-prompt-failure",
+      "gold_label": "PROMPT_FAILURE",
+      "predicted_label": "PROMPT_FAILURE",
+      "language": "ar",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-ar-003-retrieval-failure",
+      "gold_label": "RETRIEVAL_FAILURE",
+      "predicted_label": "RETRIEVAL_FAILURE",
+      "language": "ar",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-000-generation-failure",
+      "gold_label": "GENERATION_FAILURE",
+      "predicted_label": "GENERATION_FAILURE",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-000-healthy",
+      "gold_label": "HEALTHY",
+      "predicted_label": "HEALTHY",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-000-prompt-failure",
+      "gold_label": "PROMPT_FAILURE",
+      "predicted_label": "HEALTHY",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-000-retrieval-failure",
+      "gold_label": "RETRIEVAL_FAILURE",
+      "predicted_label": "RETRIEVAL_FAILURE",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-002-generation-failure",
+      "gold_label": "GENERATION_FAILURE",
+      "predicted_label": "GENERATION_FAILURE",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-002-healthy",
+      "gold_label": "HEALTHY",
+      "predicted_label": "HEALTHY",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-002-prompt-failure",
+      "gold_label": "PROMPT_FAILURE",
+      "predicted_label": "PROMPT_FAILURE",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-002-retrieval-failure",
+      "gold_label": "RETRIEVAL_FAILURE",
+      "predicted_label": "RETRIEVAL_FAILURE",
+      "language": "en",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-travel-expense-en-006-kb-failure",
+      "gold_label": "KNOWLEDGE_BASE_FAILURE",
+      "predicted_label": "KNOWLEDGE_BASE_FAILURE",
+      "language": "en",
+      "domain": "travel_expense"
+    }
+  ],
+  "breakdown_by_language": {
+    "ar": {
+      "sample_count": 4,
+      "correct": 3,
+      "mistakes": 1,
+      "accuracy": 0.75,
+      "gold_label_counts": {
+        "HEALTHY": 1,
+        "KNOWLEDGE_BASE_FAILURE": 1,
+        "PROMPT_FAILURE": 1,
+        "RETRIEVAL_FAILURE": 1
+      },
+      "predicted_label_counts": {
+        "GENERATION_FAILURE": 1,
+        "HEALTHY": 1,
+        "PROMPT_FAILURE": 1,
+        "RETRIEVAL_FAILURE": 1
+      }
+    },
+    "en": {
+      "sample_count": 11,
+      "correct": 10,
+      "mistakes": 1,
+      "accuracy": 0.9090909090909091,
+      "gold_label_counts": {
+        "GENERATION_FAILURE": 3,
+        "HEALTHY": 2,
+        "KNOWLEDGE_BASE_FAILURE": 2,
+        "PROMPT_FAILURE": 2,
+        "RETRIEVAL_FAILURE": 2
+      },
+      "predicted_label_counts": {
+        "GENERATION_FAILURE": 3,
+        "HEALTHY": 3,
+        "KNOWLEDGE_BASE_FAILURE": 2,
+        "PROMPT_FAILURE": 1,
+        "RETRIEVAL_FAILURE": 2
+      }
+    }
+  },
+  "breakdown_by_domain": {
+    "customer_returns": {
+      "sample_count": 2,
+      "correct": 2,
+      "mistakes": 0,
+      "accuracy": 1.0,
+      "gold_label_counts": {
+        "GENERATION_FAILURE": 1,
+        "KNOWLEDGE_BASE_FAILURE": 1
+      },
+      "predicted_label_counts": {
+        "GENERATION_FAILURE": 1,
+        "KNOWLEDGE_BASE_FAILURE": 1
+      }
+    },
+    "it_support": {
+      "sample_count": 12,
+      "correct": 10,
+      "mistakes": 2,
+      "accuracy": 0.8333333333333334,
+      "gold_label_counts": {
+        "GENERATION_FAILURE": 2,
+        "HEALTHY": 3,
+        "KNOWLEDGE_BASE_FAILURE": 1,
+        "PROMPT_FAILURE": 3,
+        "RETRIEVAL_FAILURE": 3
+      },
+      "predicted_label_counts": {
+        "GENERATION_FAILURE": 3,
+        "HEALTHY": 4,
+        "PROMPT_FAILURE": 2,
+        "RETRIEVAL_FAILURE": 3
+      }
+    },
+    "travel_expense": {
+      "sample_count": 1,
+      "correct": 1,
+      "mistakes": 0,
+      "accuracy": 1.0,
+      "gold_label_counts": {
+        "KNOWLEDGE_BASE_FAILURE": 1
+      },
+      "predicted_label_counts": {
+        "KNOWLEDGE_BASE_FAILURE": 1
+      }
+    }
+  },
+  "mistakes": [
+    {
+      "sample_id": "gold-it-support-ar-003-kb-failure",
+      "gold_label": "KNOWLEDGE_BASE_FAILURE",
+      "predicted_label": "GENERATION_FAILURE",
+      "language": "ar",
+      "domain": "it_support"
+    },
+    {
+      "sample_id": "gold-it-support-en-000-prompt-failure",
+      "gold_label": "PROMPT_FAILURE",
+      "predicted_label": "HEALTHY",
+      "language": "en",
+      "domain": "it_support"
+    }
+  ]
+}
