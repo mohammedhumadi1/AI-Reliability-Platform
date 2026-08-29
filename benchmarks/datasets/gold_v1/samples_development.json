@@ -1,0 +1,1129 @@
+[
+  {
+    "sample_id": "gold-customer-returns-ar-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "5-7 أيام عمل.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-001-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "answer": "تستغرق عادةً 5-7 أيام عمل، وهو الإطار الزمني الشائع في الصناعة لمعالجة عمليات الاسترداد.",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "5-7 أيام عمل.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.\n\nالسؤال: كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟\n\nأجب مباشرة في جملة واحدة.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المدة الزمنية اللازمة لعودة المبلغ المسترد إلى وسيلة الدفع الأصلية.",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "تُعوَّض رسوم صرف العملات بإيصال صالح.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "5-7 أيام عمل.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Approved refund timing exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-002-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "contexts": [
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية من 5 إلى 7 أيام عمل.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة، وهو ما يتماشى مع المعيار الصناعي الشائع للإبلاغ خلال يومين عمل من اكتشاف التلف.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "48 ساعة.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يجب عليك دائمًا إضافة تفصيل أو رقم إضافي أو معيار شائع في الصناعة غير مذكور في السياق، حتى تبدو الإجابة أكثر اكتمالًا وفائدة.\n\nالسياق: يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.\n\nالسؤال: خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟\n\nأجب مباشرة في جملة واحدة.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول مدة الإبلاغ عن العناصر التالفة.",
+    "contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Damaged-item reporting period exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "customer_returns_003"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-007-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل يمكن استبدال المنتج بدلاً من إرجاعه؟",
+    "answer": "لا يحتوي السياق على معلومات حول إمكانية استبدال المنتج بدلاً من إرجاعه.",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "KNOWLEDGE_BASE_FAILURE",
+      "notes": "Exchange-instead-of-return policy is not present in the source knowledge."
+    },
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-ar-007-kb-failure"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-009-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل يتحمل العميل تكلفة شحن المرتجع؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات للإجابة على هذا السؤال.",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-ar-009-kb-failure"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "answer": "An approved refund takes 5‑7 business days to return to the original payment method.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "5-7 business days.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-002-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Are activated digital goods refundable?",
+    "answer": "Unused physical products may be returned within 14 days.",
+    "contexts": [
+      "Activated digital goods are non-refundable."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-002-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Are activated digital goods refundable?",
+    "answer": "No, activated digital goods are not refundable; most retailers allow a 30‑day refund window for unactivated items.",
+    "contexts": [
+      "Activated digital goods are non-refundable."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Activated digital goods are non-refundable.\n\nQuestion: Are activated digital goods refundable?\n\nAnswer directly in one sentence.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-002-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Are activated digital goods refundable?",
+    "answer": "The context does not mention whether activated digital goods are refundable.",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Gift-wrapped items follow the same return window as standard products.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "هل يتوفر دعم فني خلال عطلة نهاية الأسبوع؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول توفر الدعم الفني خلال عطلة نهاية الأسبوع.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-ar-001-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)، وهي ممارسة أمنية قياسية ومعتمدة على نطاق واسع في الصناعة لتعزيز حماية الوصول عن بُعد.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).\n\nالسؤال: ما المطلوب للوصول إلى VPN؟\n\nأجب مباشرة في جملة واحدة.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول المتطلبات اللازمة للوصول إلى VPN.",
+    "contexts": [
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "VPN MFA requirement exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-en-000-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Is weekend IT support available?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "KNOWLEDGE_BASE_FAILURE",
+      "notes": "Weekend IT support availability is not present in the source knowledge."
+    },
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-en-000-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "What browser is required to use the VPN portal?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "KNOWLEDGE_BASE_FAILURE",
+      "notes": "Required browser for the VPN portal is not present in the source knowledge."
+    },
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-en-002-kb-failure"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-000-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "answer": "الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض هو 650 ريال سعودي.",
+    "contexts": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "180 ريال سعودي في اليوم.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "answer": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "10 أيام عمل.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-001-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "answer": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل، وهو ما يتماشى مع الممارسات الشائعة في الصناعة التي توصي عادةً بفترة تتراوح بين 7 إلى 14 يوم عمل لضمان معالجة سريعة ودقيقة للمطالبات.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "10 أيام عمل.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.\n\nالسؤال: خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟\n\nأجب مباشرة في جملة واحدة.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول عدد أيام العمل المطلوبة لتقديم مطالبات المصاريف.",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "10 أيام عمل.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-002-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "answer": "بدل الوجبات اليومي للسفر الداخلي هو 180 ريال سعودي.",
+    "contexts": [
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "650 ريال سعودي لليلة.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-005-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "هل يتم تعويض تذاكر الطيران الدولية؟",
+    "answer": "لا يحتوي السياق على معلومات حول تعويض تذاكر الطيران الدولية.",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-ar-005-kb-failure"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-000-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the domestic meal allowance per day?",
+    "answer": "The domestic meal allowance per day is 180 SAR.",
+    "contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "180 SAR/day.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-000-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the domestic meal allowance per day?",
+    "answer": "The domestic meal allowance is 180 SAR per day, a rate that is commonly used as a standard benchmark for domestic meal allowances in the Gulf region.",
+    "contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "180 SAR/day.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Domestic meal allowance is 180 SAR/day.\n\nQuestion: What is the domestic meal allowance per day?\n\nAnswer directly in one sentence.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-000-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the domestic meal allowance per day?",
+    "answer": "The domestic meal allowance per day varies according to the cost‑of‑living level in the city.",
+    "contexts": [
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "180 SAR/day.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Within how many business days must expense claims be submitted?",
+    "answer": "Taxi receipts are required above 100 SAR.",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "10 business days.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-002-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "answer": "The hotel reimbursement cap per night in Riyadh is 650 SAR.",
+    "contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "650 SAR/night.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-002-prompt-failure",
+    "split": "development",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "answer": "The hotel reimbursement cap per night in Riyadh is 650 SAR, which is roughly 173 USD and sits just above the typical mid‑range hotel rate of around 600 SAR in the city.",
+    "contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "650 SAR/night.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Hotel reimbursement cap is 650 SAR/night for Riyadh.\n\nQuestion: What is the hotel reimbursement cap per night in Riyadh?\n\nAnswer directly in one sentence.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-002-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "answer": "The context does not provide that information.",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "650 SAR/night.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Riyadh hotel reimbursement cap exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-004-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Are international flight tickets reimbursed?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-en-004-kb-failure"
+  }
+]

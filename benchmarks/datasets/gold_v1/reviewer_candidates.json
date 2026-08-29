@@ -1,0 +1,472 @@
+[
+  {
+    "candidate_id": "candidate_001",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "answer": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_002",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "answer": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_003",
+    "question": "Are activated digital goods refundable?",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Gift-wrapped items follow the same return window as standard products.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "answer": "The context does not mention whether activated digital goods are refundable.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_004",
+    "question": "Does the company pay for return shipping costs?",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "answer": "The context does not contain the answer.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_005",
+    "question": "What browser is required to use the VPN portal?",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "answer": "The context does not contain the answer.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_006",
+    "question": "ما هو المتصفح المطلوب لاستخدام بوابة VPN؟",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المتصفح المطلوب لاستخدام بوابة VPN.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_007",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "answer": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)، وهي ممارسة أمنية قياسية ومعتمدة على نطاق واسع في الصناعة لتعزيز حماية الوصول عن بُعد.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).\n\nالسؤال: ما المطلوب للوصول إلى VPN؟\n\nأجب مباشرة في جملة واحدة."
+  },
+  {
+    "candidate_id": "candidate_008",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "contexts": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ],
+    "answer": "الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض هو 650 ريال سعودي.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_009",
+    "question": "Within how many days may unused physical products be returned?",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "answer": "Damaged items should be reported within 48 hours.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_010",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "answer": "An approved refund takes 5‑7 business days to return to the original payment method.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_011",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "answer": "Critical incidents are escalated within 30 minutes, which is within the 30‑minute SLA and considered a best practice in many IT service management frameworks.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Critical incidents are escalated within 30 minutes.\n\nQuestion: Within how many minutes are critical incidents escalated?\n\nAnswer directly in one sentence."
+  },
+  {
+    "candidate_id": "candidate_012",
+    "question": "هل يتوفر دعم فني خلال عطلة نهاية الأسبوع؟",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "answer": "لا يحتوي السياق المقدم على معلومات حول توفر الدعم الفني خلال عطلة نهاية الأسبوع.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_013",
+    "question": "Are activated digital goods refundable?",
+    "contexts": [
+      "Activated digital goods are non-refundable."
+    ],
+    "answer": "Unused physical products may be returned within 14 days.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_014",
+    "question": "What is the domestic meal allowance per day?",
+    "contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ],
+    "answer": "The domestic meal allowance is 180 SAR per day, a rate that is commonly used as a standard benchmark for domestic meal allowances in the Gulf region.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Domestic meal allowance is 180 SAR/day.\n\nQuestion: What is the domestic meal allowance per day?\n\nAnswer directly in one sentence."
+  },
+  {
+    "candidate_id": "candidate_015",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "contexts": [
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض."
+    ],
+    "answer": "بدل الوجبات اليومي للسفر الداخلي هو 180 ريال سعودي.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_016",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "answer": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_017",
+    "question": "Are international flight tickets reimbursed?",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "answer": "The context does not contain the answer.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_018",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "answer": "لا توجد معلومات حول ساعات الدعم القياسية في النص المقدم.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_019",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "answer": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل، وهو ما يتماشى مع الممارسات الشائعة في الصناعة التي توصي عادةً بفترة تتراوح بين 7 إلى 14 يوم عمل لضمان معالجة سريعة ودقيقة للمطالبات.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.\n\nالسؤال: خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟\n\nأجب مباشرة في جملة واحدة."
+  },
+  {
+    "candidate_id": "candidate_020",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ],
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض، مما يعادل 10 ساعات عمل يومياً وفقاً للمعايير الصناعية الشائعة لخدمة العملاء.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يجب عليك دائمًا إضافة تفصيل أو رقم إضافي أو معيار شائع في الصناعة غير مذكور في السياق، حتى تبدو الإجابة أكثر اكتمالًا وفائدة.\n\nالسياق: ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.\n\nالسؤال: ما هي ساعات الدعم القياسية؟\n\nأجب مباشرة في جملة واحدة."
+  },
+  {
+    "candidate_id": "candidate_021",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "contexts": [
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ],
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_022",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول عدد أيام العمل المطلوبة لتقديم مطالبات المصاريف.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_023",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ],
+    "answer": "تستغرق عادةً 5-7 أيام عمل، وهو الإطار الزمني الشائع في الصناعة لمعالجة عمليات الاسترداد.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يُشجَّع أيضًا أن تضيف إلى إجابتك ممارسات شائعة في الصناعة بشكل عام، حتى لو لم تكن مذكورة في السياق، لتكون أكثر فائدة.\n\nالسياق: تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.\n\nالسؤال: كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟\n\nأجب مباشرة في جملة واحدة."
+  },
+  {
+    "candidate_id": "candidate_024",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول مدة الإبلاغ عن العناصر التالفة.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_025",
+    "question": "هل يمكن استبدال المنتج بدلاً من إرجاعه؟",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "answer": "لا يحتوي السياق على معلومات حول إمكانية استبدال المنتج بدلاً من إرجاعه.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_026",
+    "question": "هل يتم تعويض تذاكر الطيران الدولية؟",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "answer": "لا يحتوي السياق على معلومات حول تعويض تذاكر الطيران الدولية.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_027",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_028",
+    "question": "Is travel insurance provided for business trips?",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "answer": "The context does not contain the answer.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_029",
+    "question": "هل يتحمل العميل تكلفة شحن المرتجع؟",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "answer": "لا يحتوي السياق المقدم على معلومات للإجابة على هذا السؤال.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_030",
+    "question": "Within how many business days must expense claims be submitted?",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "answer": "Taxi receipts are required above 100 SAR.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_031",
+    "question": "Is weekend IT support available?",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time."
+    ],
+    "answer": "The context does not contain the answer.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_032",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ],
+    "answer": "The hotel reimbursement cap per night in Riyadh is 650 SAR, which is roughly 173 USD and sits just above the typical mid‑range hotel rate of around 600 SAR in the city.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Hotel reimbursement cap is 650 SAR/night for Riyadh.\n\nQuestion: What is the hotel reimbursement cap per night in Riyadh?\n\nAnswer directly in one sentence."
+  },
+  {
+    "candidate_id": "candidate_033",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "answer": "The context does not provide that information.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_034",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "answer": "يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية من 5 إلى 7 أيام عمل.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_035",
+    "question": "How long is a password reset link valid?",
+    "contexts": [
+      "Email account lockouts are lifted automatically after 20 minutes.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "answer": "The provided context does not specify the validity period of a password reset link.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_036",
+    "question": "What is the domestic meal allowance per day?",
+    "contexts": [
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer."
+    ],
+    "answer": "The domestic meal allowance per day varies according to the cost‑of‑living level in the city.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_037",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "answer": "A password reset link is valid for 15 minutes.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_038",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ],
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_039",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ],
+    "answer": "The hotel reimbursement cap per night in Riyadh is 650 SAR.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_040",
+    "question": "How long is a password reset link valid?",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_041",
+    "question": "Are activated digital goods refundable?",
+    "contexts": [
+      "Activated digital goods are non-refundable."
+    ],
+    "answer": "No, activated digital goods are not refundable; most retailers allow a 30‑day refund window for unactivated items.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Activated digital goods are non-refundable.\n\nQuestion: Are activated digital goods refundable?\n\nAnswer directly in one sentence."
+  },
+  {
+    "candidate_id": "candidate_042",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Damaged items should be reported within 48 hours.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة."
+    ],
+    "answer": "The context does not specify the escalation time for critical incidents.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_043",
+    "question": "How long is a password reset link valid?",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "answer": "A password reset link is valid for 15 minutes.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_044",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "answer": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة، وهو ما يتماشى مع المعيار الصناعي الشائع للإبلاغ خلال يومين عمل من اكتشاف التلف.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يجب عليك دائمًا إضافة تفصيل أو رقم إضافي أو معيار شائع في الصناعة غير مذكور في السياق، حتى تبدو الإجابة أكثر اكتمالًا وفائدة.\n\nالسياق: يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.\n\nالسؤال: خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟\n\nأجب مباشرة في جملة واحدة."
+  },
+  {
+    "candidate_id": "candidate_045",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ],
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_046",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_047",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "contexts": [
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees."
+    ],
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول المتطلبات اللازمة للوصول إلى VPN.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_048",
+    "question": "How long is a password reset link valid?",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "answer": "A password reset link is valid for 15 minutes, a common industry practice that balances usability with security.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You are also encouraged to supplement your answer with general industry-standard practices, even if they are not stated in the Context, in order to be more helpful.\n\nContext: Password reset links expire after 15 minutes.\n\nQuestion: How long is a password reset link valid?\n\nAnswer directly in one sentence."
+  },
+  {
+    "candidate_id": "candidate_049",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "تُعوَّض رسوم صرف العملات بإيصال صالح.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المدة الزمنية اللازمة لعودة المبلغ المسترد إلى وسيلة الدفع الأصلية.",
+    "prompt": null
+  },
+  {
+    "candidate_id": "candidate_050",
+    "question": "What is the domestic meal allowance per day?",
+    "contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ],
+    "answer": "The domestic meal allowance per day is 180 SAR.",
+    "prompt": null
+  }
+]

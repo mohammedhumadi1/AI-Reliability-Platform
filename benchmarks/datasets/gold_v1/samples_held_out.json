@@ -1,0 +1,493 @@
+[
+  {
+    "sample_id": "gold-customer-returns-en-000-generation-failure",
+    "split": "held_out",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Within how many days may unused physical products be returned?",
+    "answer": "Damaged items should be reported within 48 hours.",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "14 days.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_000"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-008-kb-failure",
+    "split": "held_out",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Does the company pay for return shipping costs?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "KNOWLEDGE_BASE_FAILURE",
+      "notes": "Return-shipping cost policy is not present in the source knowledge."
+    },
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-en-008-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-healthy",
+    "split": "held_out",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_003"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-kb-failure",
+    "split": "held_out",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هو المتصفح المطلوب لاستخدام بوابة VPN؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المتصفح المطلوب لاستخدام بوابة VPN.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "KNOWLEDGE_BASE_FAILURE",
+      "notes": "Required browser for the VPN portal is not present in the source knowledge."
+    },
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-ar-003-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-prompt-failure",
+    "split": "held_out",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض، مما يعادل 10 ساعات عمل يومياً وفقاً للمعايير الصناعية الشائعة لخدمة العملاء.",
+    "contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": "أنت مساعد افتراضي لشركة.\nالقاعدة 1: أجب بدقة باستخدام المعلومات الموجودة في السياق أدناه فقط. لا تستخدم أي معرفة خارجية.\nالقاعدة 2: يجب عليك دائمًا إضافة تفصيل أو رقم إضافي أو معيار شائع في الصناعة غير مذكور في السياق، حتى تبدو الإجابة أكثر اكتمالًا وفائدة.\n\nالسياق: ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.\n\nالسؤال: ما هي ساعات الدعم القياسية؟\n\nأجب مباشرة في جملة واحدة.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_003"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-retrieval-failure",
+    "split": "held_out",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "answer": "لا توجد معلومات حول ساعات الدعم القياسية في النص المقدم.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Standard support hours exist in source knowledge but are missing from retrieved contexts."
+    },
+    "source_fact_id": "it_support_003"
+  },
+  {
+    "sample_id": "gold-it-support-en-000-generation-failure",
+    "split": "held_out",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-en-000-healthy",
+    "split": "held_out",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "A password reset link is valid for 15 minutes.",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-en-000-prompt-failure",
+    "split": "held_out",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "A password reset link is valid for 15 minutes, a common industry practice that balances usability with security.",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "15 minutes.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You are also encouraged to supplement your answer with general industry-standard practices, even if they are not stated in the Context, in order to be more helpful.\n\nContext: Password reset links expire after 15 minutes.\n\nQuestion: How long is a password reset link valid?\n\nAnswer directly in one sentence.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-en-000-retrieval-failure",
+    "split": "held_out",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "The provided context does not specify the validity period of a password reset link.",
+    "contexts": [
+      "Email account lockouts are lifted automatically after 20 minutes.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Password reset link validity exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-generation-failure",
+    "split": "held_out",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "A password reset link is valid for 15 minutes.",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "GENERATION_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-healthy",
+    "split": "held_out",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "HEALTHY",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-prompt-failure",
+    "split": "held_out",
+    "gold_label": "PROMPT_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "Critical incidents are escalated within 30 minutes, which is within the 30‑minute SLA and considered a best practice in many IT service management frameworks.",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "30 minutes.",
+    "prompt": "You are a company assistant.\nRule 1: Answer strictly and only using the information in the Context below. Do not use any outside knowledge.\nRule 2: You must always add at least one extra detail, number, or typical industry benchmark that is NOT stated in the Context, so the answer feels more complete and helpful.\n\nContext: Critical incidents are escalated within 30 minutes.\n\nQuestion: Within how many minutes are critical incidents escalated?\n\nAnswer directly in one sentence.",
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "PROMPT_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-retrieval-failure",
+    "split": "held_out",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "The context does not specify the escalation time for critical incidents.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Damaged items should be reported within 48 hours.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "RETRIEVAL_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": {
+      "adjudicator_id": "deterministic_source_knowledge_rule_v1",
+      "label": "RETRIEVAL_FAILURE",
+      "notes": "Critical-incident escalation timing exists in source knowledge but is missing from retrieved contexts."
+    },
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-006-kb-failure",
+    "split": "held_out",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Is travel insurance provided for business trips?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [
+      {
+        "reviewer_id": "sara_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      },
+      {
+        "reviewer_id": "mohammed_reviewer",
+        "label": "KNOWLEDGE_BASE_FAILURE",
+        "notes": null
+      }
+    ],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-en-006-kb-failure"
+  }
+]

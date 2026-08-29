@@ -1,0 +1,202 @@
+[
+  {
+    "sample_id": "gold-it-support-en-000-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "A password reset link is valid for 15 minutes.",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_003"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-000-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the domestic meal allowance per day?",
+    "answer": "The domestic meal allowance per day is 180 SAR.",
+    "contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "180 SAR/day.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "answer": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "10 أيام عمل.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-002-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "answer": "The hotel reimbursement cap per night in Riyadh is 650 SAR.",
+    "contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "650 SAR/night.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-001-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "answer": "An approved refund takes 5‑7 business days to return to the original payment method.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "5-7 business days.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-002-healthy",
+    "split": "development",
+    "gold_label": "HEALTHY",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "contexts": [
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  }
+]

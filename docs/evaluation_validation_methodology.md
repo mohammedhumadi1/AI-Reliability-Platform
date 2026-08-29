@@ -53,30 +53,48 @@ prompt failure.
 ## Independent review process
 
 1. Samples are prepared without exposing the final gold label to reviewers.
-2. At least two reviewers independently assign one of the five labels.
-3. Reviewer agreement is calculated before adjudication.
+2. Two reviewers independently assign one of the five labels.
+3. Reviewer agreement is calculated before disagreement resolution.
 4. Cohen's kappa and raw observed agreement are reported.
-5. If all reviewers agree, the gold label must equal that consensus.
-6. If reviewers disagree, an independent adjudicator reviews the evidence and
-   assigns the final gold label.
-7. Reviewer annotations and adjudication metadata are retained with the
-   benchmark record.
+5. If both reviewers agree, the gold label must equal that consensus.
+6. If the disagreement is specifically between `RETRIEVAL_FAILURE` and
+   `KNOWLEDGE_BASE_FAILURE`, it is resolved using the authoritative source
+   knowledge:
+   - if the required fact exists in source knowledge but is absent from the
+     retrieved contexts, the final label is `RETRIEVAL_FAILURE`;
+   - if the required fact does not exist in source knowledge, the final label
+     is `KNOWLEDGE_BASE_FAILURE`.
+7. Any disagreement outside this deterministic case remains unresolved and
+   requires separate adjudication.
+8. Reviewer annotations and disagreement-resolution metadata are retained with
+   the benchmark record.
 
-Adjudication metadata includes the independent adjudicator identity, the final
-adjudicated label, and optional notes. When reviewers disagree, validation
-requires the stored gold label to match the adjudicator's recorded decision.
+For schema compatibility, deterministic disagreement resolution is stored in
+the existing `adjudication` field. The identifier
+`deterministic_source_knowledge_rule_v1` denotes the resolution procedure and
+does not represent a third human reviewer.
 
-The software can validate this process, but it cannot replace the required
-human independent review.
+The benchmark preparation scripts apply and record the documented deterministic
+resolution rule; the validation layer verifies the stored review and resolution
+metadata. This does not replace the two independent reviewer judgments.
 
 ## Development and held-out separation
 
-Gold samples are split deterministically and stratified by failure label.
+Gold samples are split deterministically using a group-aware 70/30 procedure
+with seed `20260824`.
+
+Samples sharing the same `source_fact_id` are treated as one group so that the
+same underlying source fact cannot appear in both development and held-out
+data, even when it is used to construct different failure labels.
 
 - Development data may be used for threshold calibration and diagnosis-rule
   tuning.
 - Held-out data must not be used for threshold selection or rule tuning.
 - Sample IDs must not overlap between the two splits.
+- `source_fact_id` values must not overlap between the two splits.
+- The target development fraction is 70%, subject to group-integrity
+  constraints.
+- Each failure label must remain represented in both splits.
 - Final reported performance must be calculated on the frozen held-out set.
 
 Benchmark-wide diversity requirements should be checked on the complete

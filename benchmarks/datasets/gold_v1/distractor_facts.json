@@ -1,0 +1,56 @@
+{
+  "it_support": {
+    "en": [
+      "Email account lockouts are lifted automatically after 20 minutes.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees.",
+      "Software installation requests are reviewed within 2 business days.",
+      "Shared printers require badge authentication before printing.",
+      "The helpdesk ticketing system logs all requests for 90 days."
+    ],
+    "ar": [
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "تشفير أجهزة الكمبيوتر المحمولة إلزامي لجميع الموظفين عن بُعد.",
+      "تتم مراجعة طلبات تثبيت البرامج خلال يومي عمل.",
+      "تتطلب الطابعات المشتركة مصادقة بالبطاقة قبل الطباعة.",
+      "يسجل نظام تذاكر الدعم الفني جميع الطلبات لمدة 90 يومًا."
+    ]
+  },
+  "travel_expense": {
+    "en": [
+      "Conference registration fees are reimbursed with prior manager approval.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer.",
+      "International SIM card costs are covered for business trips abroad.",
+      "Per diem rates vary by destination city cost-of-living tier.",
+      "Airport lounge access is not covered under the standard travel policy.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "ar": [
+      "تُعوَّض رسوم التسجيل في المؤتمرات بموافقة مسبقة من المدير.",
+      "يُحتسب تعويض المسافة بمعدل ثابت لكل كيلومتر.",
+      "تُغطى تكاليف شرائح الاتصال الدولية لرحلات العمل بالخارج.",
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "الوصول إلى صالات المطار غير مشمول ضمن سياسة السفر القياسية.",
+      "تُعوَّض رسوم صرف العملات بإيصال صالح."
+    ]
+  },
+  "customer_returns": {
+    "en": [
+      "Gift-wrapped items follow the same return window as standard products.",
+      "Store credit issued for returns expires after 12 months.",
+      "Bulk orders above 50 units require a separate return authorization.",
+      "Seasonal items may have a shortened return window during peak periods.",
+      "Return labels are generated automatically once a return is approved.",
+      "Exchanges for a different size do not require a new order number."
+    ],
+    "ar": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "ينتهي رصيد المتجر الصادر عن الإرجاع بعد 12 شهرًا.",
+      "الطلبات الكبيرة التي تتجاوز 50 قطعة تتطلب تصريح إرجاع منفصل.",
+      "قد تكون مدة إرجاع المنتجات الموسمية أقصر خلال فترات الذروة.",
+      "يتم إنشاء ملصقات الإرجاع تلقائيًا بعد الموافقة على الطلب.",
+      "استبدال المقاس لا يتطلب رقم طلب جديد."
+    ]
+  }
+}

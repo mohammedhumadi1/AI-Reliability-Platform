@@ -1,0 +1,97 @@
+{
+  "reviewer_a_id": "sara_reviewer",
+  "reviewer_b_id": "mohammed_reviewer",
+  "total_samples": 50,
+  "agreements": 38,
+  "disagreements": 12,
+  "agreement_rate": 0.76,
+  "cohen_kappa": 0.7,
+  "reviewer_a_distribution": {
+    "GENERATION_FAILURE": 10,
+    "HEALTHY": 10,
+    "KNOWLEDGE_BASE_FAILURE": 12,
+    "PROMPT_FAILURE": 10,
+    "RETRIEVAL_FAILURE": 8
+  },
+  "reviewer_b_distribution": {
+    "GENERATION_FAILURE": 10,
+    "HEALTHY": 10,
+    "KNOWLEDGE_BASE_FAILURE": 10,
+    "PROMPT_FAILURE": 10,
+    "RETRIEVAL_FAILURE": 10
+  },
+  "disagreement_details": [
+    {
+      "candidate_id": "candidate_004",
+      "sample_id": "gold-customer-returns-en-008-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_005",
+      "sample_id": "gold-it-support-en-002-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_006",
+      "sample_id": "gold-it-support-ar-003-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_018",
+      "sample_id": "gold-it-support-ar-003-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_024",
+      "sample_id": "gold-customer-returns-ar-003-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_025",
+      "sample_id": "gold-customer-returns-ar-007-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_031",
+      "sample_id": "gold-it-support-en-000-kb-failure",
+      "reviewer_a_label": "RETRIEVAL_FAILURE",
+      "reviewer_b_label": "KNOWLEDGE_BASE_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_033",
+      "sample_id": "gold-travel-expense-en-002-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_035",
+      "sample_id": "gold-it-support-en-000-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_042",
+      "sample_id": "gold-it-support-en-002-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_047",
+      "sample_id": "gold-it-support-ar-001-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    },
+    {
+      "candidate_id": "candidate_049",
+      "sample_id": "gold-customer-returns-ar-001-retrieval-failure",
+      "reviewer_a_label": "KNOWLEDGE_BASE_FAILURE",
+      "reviewer_b_label": "RETRIEVAL_FAILURE"
+    }
+  ]
+}

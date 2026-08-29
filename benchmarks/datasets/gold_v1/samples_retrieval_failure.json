@@ -1,0 +1,222 @@
+[
+  {
+    "sample_id": "gold-it-support-en-000-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "The provided context does not specify the validity period of a password reset link.",
+    "contexts": [
+      "Email account lockouts are lifted automatically after 20 minutes.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول المتطلبات اللازمة للوصول إلى VPN.",
+    "contexts": [
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "The context does not specify the escalation time for critical incidents.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Damaged items should be reported within 48 hours.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "answer": "لا توجد معلومات حول ساعات الدعم القياسية في النص المقدم.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_003"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-000-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the domestic meal allowance per day?",
+    "answer": "The domestic meal allowance per day varies according to the cost‑of‑living level in the city.",
+    "contexts": [
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "180 SAR/day.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول عدد أيام العمل المطلوبة لتقديم مطالبات المصاريف.",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "10 أيام عمل.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-002-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "answer": "The context does not provide that information.",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "650 SAR/night.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-001-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المدة الزمنية اللازمة لعودة المبلغ المسترد إلى وسيلة الدفع الأصلية.",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "تُعوَّض رسوم صرف العملات بإيصال صالح.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "5-7 أيام عمل.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-002-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Are activated digital goods refundable?",
+    "answer": "The context does not mention whether activated digital goods are refundable.",
+    "contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Gift-wrapped items follow the same return window as standard products.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-retrieval-failure",
+    "split": "development",
+    "gold_label": "RETRIEVAL_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "لا يحتوي السياق المقدم على أي معلومات حول مدة الإبلاغ عن العناصر التالفة.",
+    "contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk3",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  }
+]

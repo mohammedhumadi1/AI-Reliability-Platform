@@ -1,0 +1,314 @@
+[
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "en",
+    "question": "How long is a password reset link valid?",
+    "correct_context": "Password reset links expire after 15 minutes.",
+    "reference_answer": "15 minutes.",
+    "retrieved_contexts": [
+      "Email account lockouts are lifted automatically after 20 minutes.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "ما مدة صلاحية رابط إعادة تعيين كلمة المرور؟",
+    "correct_context": "تنتهي صلاحية روابط إعادة تعيين كلمة المرور بعد 15 دقيقة.",
+    "reference_answer": "15 دقيقة.",
+    "retrieved_contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة.",
+      "Email account lockouts are lifted automatically after 20 minutes."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "en",
+    "question": "What is required to access the VPN?",
+    "correct_context": "VPN access requires MFA (multi-factor authentication).",
+    "reference_answer": "Multi-factor authentication (MFA).",
+    "retrieved_contexts": [
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "correct_context": "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "retrieved_contexts": [
+      "يتطلب الوصول الضيف لشبكة الواي فاي رمزًا مؤقتًا من الاستقبال.",
+      "Wi-Fi guest access requires a temporary code from reception.",
+      "Laptop encryption is mandatory for all remote employees."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "correct_context": "Critical incidents are escalated within 30 minutes.",
+    "reference_answer": "30 minutes.",
+    "retrieved_contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Damaged items should be reported within 48 hours.",
+      "يتم رفع قفل حساب البريد الإلكتروني تلقائيًا بعد 20 دقيقة."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "خلال كم دقيقة يتم تصعيد الحوادث الحرجة؟",
+    "correct_context": "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+    "reference_answer": "30 دقيقة.",
+    "retrieved_contexts": [
+      "Damaged items should be reported within 48 hours.",
+      "Unused physical products may be returned within 14 days.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "en",
+    "question": "What are the standard support hours?",
+    "correct_context": "Standard support hours are 08:00-18:00 Riyadh time.",
+    "reference_answer": "08:00-18:00 Riyadh time.",
+    "retrieved_contexts": [
+      "تتم مراجعة طلبات تثبيت البرامج خلال يومي عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "correct_context": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "reference_answer": "من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "retrieved_contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "en",
+    "question": "What is the domestic meal allowance per day?",
+    "correct_context": "Domestic meal allowance is 180 SAR/day.",
+    "reference_answer": "180 SAR/day.",
+    "retrieved_contexts": [
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "correct_context": "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم.",
+    "reference_answer": "180 ريال سعودي في اليوم.",
+    "retrieved_contexts": [
+      "تختلف بدلات المعيشة اليومية حسب مستوى تكلفة المعيشة بالمدينة.",
+      "Per diem rates vary by destination city cost-of-living tier.",
+      "تُغطى تكاليف شرائح الاتصال الدولية لرحلات العمل بالخارج."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "en",
+    "question": "Within how many business days must expense claims be submitted?",
+    "correct_context": "Expense claims must be submitted within 10 business days.",
+    "reference_answer": "10 business days.",
+    "retrieved_contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Approved refunds return to the original payment method in 5-7 business days.",
+      "Software installation requests are reviewed within 2 business days."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "correct_context": "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+    "reference_answer": "10 أيام عمل.",
+    "retrieved_contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "en",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "correct_context": "Hotel reimbursement cap is 650 SAR/night for Riyadh.",
+    "reference_answer": "650 SAR/night.",
+    "retrieved_contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "correct_context": "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض.",
+    "reference_answer": "650 ريال سعودي لليلة.",
+    "retrieved_contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "Wi-Fi guest access requires a temporary code from reception."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Above what amount are taxi receipts required?",
+    "correct_context": "Taxi receipts are required above 100 SAR.",
+    "reference_answer": "100 SAR.",
+    "retrieved_contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Currency exchange fees are reimbursable with a valid receipt.",
+      "Mileage reimbursement is calculated at a fixed rate per kilometer."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ابتداءً من أي مبلغ تكون إيصالات سيارات الأجرة مطلوبة؟",
+    "correct_context": "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي.",
+    "reference_answer": "100 ريال سعودي.",
+    "retrieved_contexts": [
+      "Mileage reimbursement is calculated at a fixed rate per kilometer.",
+      "تُغطى تكاليف شرائح الاتصال الدولية لرحلات العمل بالخارج.",
+      "Per diem rates vary by destination city cost-of-living tier."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "en",
+    "question": "Within how many days may unused physical products be returned?",
+    "correct_context": "Unused physical products may be returned within 14 days.",
+    "reference_answer": "14 days.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "قد تكون مدة إرجاع المنتجات الموسمية أقصر خلال فترات الذروة.",
+      "Seasonal items may have a shortened return window during peak periods."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "خلال كم يوم يمكن إرجاع المنتجات المادية غير المستخدمة؟",
+    "correct_context": "يمكن إرجاع المنتجات المادية غير المستخدمة خلال 14 يومًا.",
+    "reference_answer": "14 يومًا.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "قد تكون مدة إرجاع المنتجات الموسمية أقصر خلال فترات الذروة.",
+      "Seasonal items may have a shortened return window during peak periods."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "en",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "correct_context": "Approved refunds return to the original payment method in 5-7 business days.",
+    "reference_answer": "5-7 business days.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Return labels are generated automatically once a return is approved.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "correct_context": "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+    "reference_answer": "5-7 أيام عمل.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "تُعوَّض رسوم صرف العملات بإيصال صالح.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Are activated digital goods refundable?",
+    "correct_context": "Activated digital goods are non-refundable.",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Gift-wrapped items follow the same return window as standard products.",
+      "Currency exchange fees are reimbursable with a valid receipt."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "correct_context": "السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "reference_answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "retrieved_contexts": [
+      "المنتجات المغلفة كهدايا تخضع لنفس مدة الإرجاع القياسية.",
+      "Gift-wrapped items follow the same return window as standard products.",
+      "قد تكون مدة إرجاع المنتجات الموسمية أقصر خلال فترات الذروة."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Within how many hours should damaged items be reported?",
+    "correct_context": "Damaged items should be reported within 48 hours.",
+    "reference_answer": "48 hours.",
+    "retrieved_contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "Critical incidents are escalated within 30 minutes.",
+      "Expense claims must be submitted within 10 business days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "correct_context": "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+    "reference_answer": "48 ساعة.",
+    "retrieved_contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "Critical incidents are escalated within 30 minutes."
+    ]
+  }
+]

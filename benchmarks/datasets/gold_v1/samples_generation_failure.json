@@ -1,0 +1,202 @@
+[
+  {
+    "sample_id": "gold-it-support-en-000-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "How long is a password reset link valid?",
+    "answer": "Critical incidents are escalated within 30 minutes.",
+    "contexts": [
+      "Password reset links expire after 15 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "15 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_000"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "answer": "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "المصادقة متعددة العوامل (MFA).",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_001"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "answer": "A password reset link is valid for 15 minutes.",
+    "contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "30 minutes.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_002"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-000-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "answer": "الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض هو 650 ريال سعودي.",
+    "contexts": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "180 ريال سعودي في اليوم.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_000"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Within how many business days must expense claims be submitted?",
+    "answer": "Taxi receipts are required above 100 SAR.",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "10 business days.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_001"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-002-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "answer": "بدل الوجبات اليومي للسفر الداخلي هو 180 ريال سعودي.",
+    "contexts": [
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "650 ريال سعودي لليلة.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-000-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Within how many days may unused physical products be returned?",
+    "answer": "Damaged items should be reported within 48 hours.",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "14 days.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_000"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-001-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "answer": "لا، السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+    "contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "5-7 أيام عمل.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_001"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-002-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Are activated digital goods refundable?",
+    "answer": "Unused physical products may be returned within 14 days.",
+    "contexts": [
+      "Activated digital goods are non-refundable."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "No, activated digital goods are non-refundable.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_002"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-003-generation-failure",
+    "split": "development",
+    "gold_label": "GENERATION_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "answer": "يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية من 5 إلى 7 أيام عمل.",
+    "contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": "48 ساعة.",
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_003"
+  }
+]

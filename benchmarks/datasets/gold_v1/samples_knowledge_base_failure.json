@@ -1,0 +1,202 @@
+[
+  {
+    "sample_id": "gold-it-support-en-000-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "Is weekend IT support available?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-en-000-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-ar-001-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "هل يتوفر دعم فني خلال عطلة نهاية الأسبوع؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول توفر الدعم الفني خلال عطلة نهاية الأسبوع.",
+    "contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-ar-001-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-en-002-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "it_support",
+    "question": "What browser is required to use the VPN portal?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-en-002-kb-failure"
+  },
+  {
+    "sample_id": "gold-it-support-ar-003-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "it_support",
+    "question": "ما هو المتصفح المطلوب لاستخدام بوابة VPN؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات حول المتصفح المطلوب لاستخدام بوابة VPN.",
+    "contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "it_support_OUT_OF_SCOPE_gold-it-support-ar-003-kb-failure"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-004-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Are international flight tickets reimbursed?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-en-004-kb-failure"
+  },
+  {
+    "sample_id": "gold-travel-expense-ar-005-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "travel_expense",
+    "question": "هل يتم تعويض تذاكر الطيران الدولية؟",
+    "answer": "لا يحتوي السياق على معلومات حول تعويض تذاكر الطيران الدولية.",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-ar-005-kb-failure"
+  },
+  {
+    "sample_id": "gold-travel-expense-en-006-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "travel_expense",
+    "question": "Is travel insurance provided for business trips?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "travel_expense_OUT_OF_SCOPE_gold-travel-expense-en-006-kb-failure"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-007-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل يمكن استبدال المنتج بدلاً من إرجاعه؟",
+    "answer": "لا يحتوي السياق على معلومات حول إمكانية استبدال المنتج بدلاً من إرجاعه.",
+    "contexts": [
+      "Unused physical products may be returned within 14 days."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-ar-007-kb-failure"
+  },
+  {
+    "sample_id": "gold-customer-returns-en-008-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "en",
+    "domain": "customer_returns",
+    "question": "Does the company pay for return shipping costs?",
+    "answer": "The context does not contain the answer.",
+    "contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ],
+    "model_provider": "groq",
+    "model_name": "openai/gpt-oss-20b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-en-008-kb-failure"
+  },
+  {
+    "sample_id": "gold-customer-returns-ar-009-kb-failure",
+    "split": "development",
+    "gold_label": "KNOWLEDGE_BASE_FAILURE",
+    "language": "ar",
+    "domain": "customer_returns",
+    "question": "هل يتحمل العميل تكلفة شحن المرتجع؟",
+    "answer": "لا يحتوي السياق المقدم على معلومات للإجابة على هذا السؤال.",
+    "contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ],
+    "model_provider": "groq",
+    "model_name": "qwen/qwen3.6-27b",
+    "retriever_name": "chroma_minilm_topk1",
+    "reference_answer": null,
+    "prompt": null,
+    "reviewers": [],
+    "adjudication": null,
+    "source_fact_id": "customer_returns_OUT_OF_SCOPE_gold-customer-returns-ar-009-kb-failure"
+  }
+]

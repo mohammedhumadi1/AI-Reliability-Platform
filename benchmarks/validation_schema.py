@@ -102,6 +102,7 @@ class ValidationSample:
         ...
     ] = ()
     adjudication: Adjudication | None = None
+    source_fact_id: str | None = None
 
     def __post_init__(self) -> None:
         text_fields = {

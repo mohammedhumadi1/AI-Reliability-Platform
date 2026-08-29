@@ -1,0 +1,578 @@
+[
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "en",
+    "question": "How long is a password reset link valid?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Password reset links expire after 15 minutes."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "en",
+    "question": "How long is a password reset link valid?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Password reset links expire after 15 minutes.",
+      "تنتهي صلاحية روابط إعادة تعيين كلمة المرور بعد 15 دقيقة.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "ما مدة صلاحية رابط إعادة تعيين كلمة المرور؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "تنتهي صلاحية روابط إعادة تعيين كلمة المرور بعد 15 دقيقة."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "ما مدة صلاحية رابط إعادة تعيين كلمة المرور؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "تنتهي صلاحية روابط إعادة تعيين كلمة المرور بعد 15 دقيقة.",
+      "Password reset links expire after 15 minutes.",
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "en",
+    "question": "What is required to access the VPN?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "en",
+    "question": "What is required to access the VPN?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+      "VPN access requires MFA (multi-factor authentication).",
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA)."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "ما المطلوب للوصول إلى VPN؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+      "VPN access requires MFA (multi-factor authentication).",
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Critical incidents are escalated within 30 minutes."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Within how many minutes are critical incidents escalated?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Critical incidents are escalated within 30 minutes.",
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "خلال كم دقيقة يتم تصعيد الحوادث الحرجة؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "خلال كم دقيقة يتم تصعيد الحوادث الحرجة؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "Critical incidents are escalated within 30 minutes.",
+      "Damaged items should be reported within 48 hours."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "en",
+    "question": "What are the standard support hours?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "en",
+    "question": "What are the standard support hours?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ]
+  },
+  {
+    "domain": "it_support",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ما هي ساعات الدعم القياسية؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض.",
+      "Standard support hours are 08:00-18:00 Riyadh time.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "en",
+    "question": "What is the domestic meal allowance per day?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Domestic meal allowance is 180 SAR/day."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "en",
+    "question": "What is the domestic meal allowance per day?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Domestic meal allowance is 180 SAR/day.",
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "كم بدل الوجبات اليومي للسفر الداخلي؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم.",
+      "Domestic meal allowance is 180 SAR/day.",
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "en",
+    "question": "Within how many business days must expense claims be submitted?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Expense claims must be submitted within 10 business days."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "en",
+    "question": "Within how many business days must expense claims be submitted?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Expense claims must be submitted within 10 business days.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "خلال كم يوم عمل يجب تقديم مطالبات المصاريف؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Expense claims must be submitted within 10 business days."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "en",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "en",
+    "question": "What is the hotel reimbursement cap per night in Riyadh?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh.",
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض.",
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "ما الحد الأقصى لتعويض الفندق لليلة الواحدة في الرياض؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض.",
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh.",
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Above what amount are taxi receipts required?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Above what amount are taxi receipts required?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي.",
+      "Taxi receipts are required above 100 SAR.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ابتداءً من أي مبلغ تكون إيصالات سيارات الأجرة مطلوبة؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ]
+  },
+  {
+    "domain": "travel_expense",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "ابتداءً من أي مبلغ تكون إيصالات سيارات الأجرة مطلوبة؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي.",
+      "Taxi receipts are required above 100 SAR.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "en",
+    "question": "Within how many days may unused physical products be returned?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Unused physical products may be returned within 14 days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "en",
+    "question": "Within how many days may unused physical products be returned?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Unused physical products may be returned within 14 days.",
+      "يمكن إرجاع المنتجات المادية غير المستخدمة خلال 14 يومًا.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "خلال كم يوم يمكن إرجاع المنتجات المادية غير المستخدمة؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Unused physical products may be returned within 14 days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 0,
+    "language": "ar",
+    "question": "خلال كم يوم يمكن إرجاع المنتجات المادية غير المستخدمة؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Unused physical products may be returned within 14 days.",
+      "يمكن إرجاع المنتجات المادية غير المستخدمة خلال 14 يومًا.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "en",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "en",
+    "question": "How long does an approved refund take to return to the original payment method?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Approved refunds return to the original payment method in 5-7 business days.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "يمكن إرجاع المنتجات المادية غير المستخدمة خلال 14 يومًا."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 1,
+    "language": "ar",
+    "question": "كم من الوقت يستغرق عودة المبلغ المسترد المعتمد إلى وسيلة الدفع الأصلية؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "Approved refunds return to the original payment method in 5-7 business days.",
+      "Unused physical products may be returned within 14 days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Are activated digital goods refundable?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Activated digital goods are non-refundable."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "en",
+    "question": "Are activated digital goods refundable?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Activated digital goods are non-refundable.",
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+      "Unused physical products may be returned within 14 days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 2,
+    "language": "ar",
+    "question": "هل السلع الرقمية المُفعّلة قابلة للاسترداد؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+      "Activated digital goods are non-refundable.",
+      "Unused physical products may be returned within 14 days."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Within how many hours should damaged items be reported?",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "Damaged items should be reported within 48 hours."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "en",
+    "question": "Within how many hours should damaged items be reported?",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "Damaged items should be reported within 48 hours.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "retriever_name": "chroma_minilm_topk1",
+    "top_k": 1,
+    "retrieved_contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ]
+  },
+  {
+    "domain": "customer_returns",
+    "fact_index": 3,
+    "language": "ar",
+    "question": "خلال كم ساعة يجب الإبلاغ عن العناصر التالفة؟",
+    "retriever_name": "chroma_minilm_topk3",
+    "top_k": 3,
+    "retrieved_contexts": [
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة.",
+      "Damaged items should be reported within 48 hours.",
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة."
+    ]
+  }
+]

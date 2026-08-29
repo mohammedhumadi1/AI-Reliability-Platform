@@ -1,0 +1,44 @@
+{
+  "it_support": {
+    "en": [
+      "Password reset links expire after 15 minutes.",
+      "VPN access requires MFA (multi-factor authentication).",
+      "Critical incidents are escalated within 30 minutes.",
+      "Standard support hours are 08:00-18:00 Riyadh time."
+    ],
+    "ar": [
+      "تنتهي صلاحية روابط إعادة تعيين كلمة المرور بعد 15 دقيقة.",
+      "يتطلب الوصول إلى VPN تفعيل المصادقة متعددة العوامل (MFA).",
+      "يتم تصعيد الحوادث الحرجة خلال 30 دقيقة.",
+      "ساعات الدعم القياسية هي من 08:00 إلى 18:00 بتوقيت الرياض."
+    ]
+  },
+  "travel_expense": {
+    "en": [
+      "Domestic meal allowance is 180 SAR/day.",
+      "Expense claims must be submitted within 10 business days.",
+      "Hotel reimbursement cap is 650 SAR/night for Riyadh.",
+      "Taxi receipts are required above 100 SAR."
+    ],
+    "ar": [
+      "بدل الوجبات للسفر الداخلي هو 180 ريال سعودي في اليوم.",
+      "يجب تقديم مطالبات المصاريف خلال 10 أيام عمل.",
+      "الحد الأقصى لتعويض الفندق هو 650 ريال سعودي لليلة في الرياض.",
+      "إيصالات سيارات الأجرة مطلوبة للمبالغ التي تتجاوز 100 ريال سعودي."
+    ]
+  },
+  "customer_returns": {
+    "en": [
+      "Unused physical products may be returned within 14 days.",
+      "Approved refunds return to the original payment method in 5-7 business days.",
+      "Activated digital goods are non-refundable.",
+      "Damaged items should be reported within 48 hours."
+    ],
+    "ar": [
+      "يمكن إرجاع المنتجات المادية غير المستخدمة خلال 14 يومًا.",
+      "تعود المبالغ المستردة المعتمدة إلى وسيلة الدفع الأصلية خلال 5-7 أيام عمل.",
+      "السلع الرقمية المُفعّلة غير قابلة للاسترداد.",
+      "يجب الإبلاغ عن العناصر التالفة خلال 48 ساعة."
+    ]
+  }
+}

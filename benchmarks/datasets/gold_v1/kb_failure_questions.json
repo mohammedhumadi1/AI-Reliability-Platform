@@ -1,0 +1,12 @@
+[
+  {"domain": "it_support", "language": "en", "question": "Is weekend IT support available?"},
+  {"domain": "it_support", "language": "ar", "question": "هل يتوفر دعم فني خلال عطلة نهاية الأسبوع؟"},
+  {"domain": "it_support", "language": "en", "question": "What browser is required to use the VPN portal?"},
+  {"domain": "it_support", "language": "ar", "question": "ما هو المتصفح المطلوب لاستخدام بوابة VPN؟"},
+  {"domain": "travel_expense", "language": "en", "question": "Are international flight tickets reimbursed?"},
+  {"domain": "travel_expense", "language": "ar", "question": "هل يتم تعويض تذاكر الطيران الدولية؟"},
+  {"domain": "travel_expense", "language": "en", "question": "Is travel insurance provided for business trips?"},
+  {"domain": "customer_returns", "language": "ar", "question": "هل يمكن استبدال المنتج بدلاً من إرجاعه؟"},
+  {"domain": "customer_returns", "language": "en", "question": "Does the company pay for return shipping costs?"},
+  {"domain": "customer_returns", "language": "ar", "question": "هل يتحمل العميل تكلفة شحن المرتجع؟"}
+]

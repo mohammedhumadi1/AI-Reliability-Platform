@@ -1,0 +1,202 @@
+[
+  {
+    "neutral_id": "candidate_001",
+    "real_sample_id": "gold-customer-returns-ar-003-healthy"
+  },
+  {
+    "neutral_id": "candidate_002",
+    "real_sample_id": "gold-travel-expense-ar-001-healthy"
+  },
+  {
+    "neutral_id": "candidate_003",
+    "real_sample_id": "gold-customer-returns-en-002-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_004",
+    "real_sample_id": "gold-customer-returns-en-008-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_005",
+    "real_sample_id": "gold-it-support-en-002-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_006",
+    "real_sample_id": "gold-it-support-ar-003-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_007",
+    "real_sample_id": "gold-it-support-ar-001-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_008",
+    "real_sample_id": "gold-travel-expense-ar-000-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_009",
+    "real_sample_id": "gold-customer-returns-en-000-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_010",
+    "real_sample_id": "gold-customer-returns-en-001-healthy"
+  },
+  {
+    "neutral_id": "candidate_011",
+    "real_sample_id": "gold-it-support-en-002-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_012",
+    "real_sample_id": "gold-it-support-ar-001-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_013",
+    "real_sample_id": "gold-customer-returns-en-002-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_014",
+    "real_sample_id": "gold-travel-expense-en-000-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_015",
+    "real_sample_id": "gold-travel-expense-ar-002-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_016",
+    "real_sample_id": "gold-it-support-ar-001-healthy"
+  },
+  {
+    "neutral_id": "candidate_017",
+    "real_sample_id": "gold-travel-expense-en-004-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_018",
+    "real_sample_id": "gold-it-support-ar-003-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_019",
+    "real_sample_id": "gold-travel-expense-ar-001-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_020",
+    "real_sample_id": "gold-it-support-ar-003-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_021",
+    "real_sample_id": "gold-customer-returns-ar-002-healthy"
+  },
+  {
+    "neutral_id": "candidate_022",
+    "real_sample_id": "gold-travel-expense-ar-001-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_023",
+    "real_sample_id": "gold-customer-returns-ar-001-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_024",
+    "real_sample_id": "gold-customer-returns-ar-003-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_025",
+    "real_sample_id": "gold-customer-returns-ar-007-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_026",
+    "real_sample_id": "gold-travel-expense-ar-005-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_027",
+    "real_sample_id": "gold-it-support-en-002-healthy"
+  },
+  {
+    "neutral_id": "candidate_028",
+    "real_sample_id": "gold-travel-expense-en-006-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_029",
+    "real_sample_id": "gold-customer-returns-ar-009-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_030",
+    "real_sample_id": "gold-travel-expense-en-001-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_031",
+    "real_sample_id": "gold-it-support-en-000-kb-failure"
+  },
+  {
+    "neutral_id": "candidate_032",
+    "real_sample_id": "gold-travel-expense-en-002-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_033",
+    "real_sample_id": "gold-travel-expense-en-002-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_034",
+    "real_sample_id": "gold-customer-returns-ar-003-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_035",
+    "real_sample_id": "gold-it-support-en-000-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_036",
+    "real_sample_id": "gold-travel-expense-en-000-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_037",
+    "real_sample_id": "gold-it-support-en-002-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_038",
+    "real_sample_id": "gold-it-support-ar-003-healthy"
+  },
+  {
+    "neutral_id": "candidate_039",
+    "real_sample_id": "gold-travel-expense-en-002-healthy"
+  },
+  {
+    "neutral_id": "candidate_040",
+    "real_sample_id": "gold-it-support-en-000-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_041",
+    "real_sample_id": "gold-customer-returns-en-002-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_042",
+    "real_sample_id": "gold-it-support-en-002-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_043",
+    "real_sample_id": "gold-it-support-en-000-healthy"
+  },
+  {
+    "neutral_id": "candidate_044",
+    "real_sample_id": "gold-customer-returns-ar-003-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_045",
+    "real_sample_id": "gold-customer-returns-ar-001-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_046",
+    "real_sample_id": "gold-it-support-ar-001-generation-failure"
+  },
+  {
+    "neutral_id": "candidate_047",
+    "real_sample_id": "gold-it-support-ar-001-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_048",
+    "real_sample_id": "gold-it-support-en-000-prompt-failure"
+  },
+  {
+    "neutral_id": "candidate_049",
+    "real_sample_id": "gold-customer-returns-ar-001-retrieval-failure"
+  },
+  {
+    "neutral_id": "candidate_050",
+    "real_sample_id": "gold-travel-expense-en-000-healthy"
+  }
+]
