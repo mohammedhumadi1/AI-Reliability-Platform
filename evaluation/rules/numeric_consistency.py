@@ -44,6 +44,18 @@ SPECIAL_ARABIC_DURATIONS = {
 }
 
 UNIT_TO_DAYS = {
+    "minute": 1 / (24 * 60),
+    "minutes": 1 / (24 * 60),
+    "دقيقة": 1 / (24 * 60),
+    "دقائق": 1 / (24 * 60),
+    "دقيقه": 1 / (24 * 60),
+
+    "hour": 1 / 24,
+    "hours": 1 / 24,
+    "ساعة": 1 / 24,
+    "ساعات": 1 / 24,
+    "ساعه": 1 / 24,
+
     "day": 1,
     "days": 1,
     "يوم": 1,
@@ -78,7 +90,7 @@ ARABIC_DIGIT_TRANSLATION = str.maketrans(
     "0123456789.",
 )
 
-DURATION_TOLERANCE_DAYS = 0.01
+DURATION_TOLERANCE_DAYS = 1 / (24 * 60 * 2)
 MONEY_TOLERANCE = 0.01
 
 
