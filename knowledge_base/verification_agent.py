@@ -3,9 +3,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
 
 from evaluation.generation.embedding_service import semantic_similarity
 from evaluation.evaluators.numeric import NumericConsistencyEvaluator
+from evaluation.rules.numeric_consistency import (
+    extract_durations_in_days,
+    extract_monetary_values,
+)
 from knowledge_base.vector_store import (
     collection_record_count,
     query_similar_chunks,
@@ -15,6 +20,66 @@ from knowledge_base.vector_store import (
 QUESTION_RELEVANCE_THRESHOLD = 0.50
 ANSWER_SUPPORT_THRESHOLD = 0.60
 CONTEXT_ALIGNMENT_THRESHOLD = 0.55
+
+
+def _select_numeric_evidence(
+    question: str,
+    answer: str,
+    evidence_text: str,
+) -> str:
+    """Return question-aligned evidence with comparable numeric content."""
+    normalized = re.sub(
+        r"\s+",
+        " ",
+        evidence_text.strip(),
+    )
+
+    if not normalized:
+        return ""
+
+    units = [
+        unit.strip()
+        for unit in re.split(
+            r"(?<=[.!?])\s+",
+            normalized,
+        )
+        if unit.strip()
+    ]
+
+    if not units:
+        return normalized
+
+    answer_has_duration = bool(
+        extract_durations_in_days(answer)
+    )
+    answer_has_money = bool(
+        extract_monetary_values(answer)
+    )
+
+    numeric_units = [
+        unit
+        for unit in units
+        if (
+            (
+                answer_has_duration
+                and extract_durations_in_days(unit)
+            )
+            or (
+                answer_has_money
+                and extract_monetary_values(unit)
+            )
+        )
+    ]
+
+    candidates = numeric_units or units
+
+    return max(
+        candidates,
+        key=lambda unit: semantic_similarity(
+            question,
+            unit,
+        ),
+    )
 
 
 @dataclass(frozen=True)
@@ -201,10 +266,16 @@ def verify_answer(
         best_text,
     )
 
+    numeric_evidence = _select_numeric_evidence(
+        question=clean_question,
+        answer=clean_answer,
+        evidence_text=best_text,
+    )
+
     numeric_result = (
         NumericConsistencyEvaluator().evaluate(
             answer=clean_answer,
-            evidence=best_text,
+            evidence=numeric_evidence,
         )
     )
 

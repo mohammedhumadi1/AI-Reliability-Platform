@@ -161,3 +161,76 @@ def test_no_relevant_company_evidence_is_kb_gap_signal(
     assert result.status == "NO_RELEVANT_EVIDENCE"
     assert result.evidence_found is False
     assert result.health_score_component == 0.0
+
+def test_numeric_contradiction_uses_question_aligned_evidence_unit(
+    monkeypatch,
+) -> None:
+    monkeypatch.setattr(
+        agent,
+        "collection_record_count",
+        lambda project_id: 1,
+    )
+
+    evidence = (
+        "Password reset requests must be completed within 15 minutes. "
+        "Temporary passwords must be changed after login. "
+        "Critical incidents must receive an initial response within "
+        "30 minutes."
+    )
+
+    monkeypatch.setattr(
+        agent,
+        "query_similar_chunks",
+        lambda **kwargs: [
+            _match(evidence)
+        ],
+    )
+
+    question = (
+        "When must password reset requests be completed?"
+    )
+
+    def fake_similarity(
+        left: str,
+        right: str,
+    ) -> float:
+        if left == question:
+            if (
+                "password reset requests"
+                in right.lower()
+            ):
+                return 0.9
+
+            if (
+                "critical incidents"
+                in right.lower()
+            ):
+                return 0.2
+
+        return 0.95
+
+    monkeypatch.setattr(
+        agent,
+        "semantic_similarity",
+        fake_similarity,
+    )
+
+    result = agent.verify_answer(
+        project_id="p1",
+        question=question,
+        answer=(
+            "Password reset requests must be completed "
+            "within 30 minutes."
+        ),
+        rag_contexts=[
+            (
+                "Password reset requests must be completed "
+                "within 15 minutes."
+            )
+        ],
+    )
+
+    assert result.status == "CONTRADICTED"
+    assert result.is_supported is False
+    assert result.numeric_contradiction is True
+    assert result.health_score_component == 0.0

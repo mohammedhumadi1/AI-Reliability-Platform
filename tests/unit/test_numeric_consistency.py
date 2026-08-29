@@ -84,3 +84,30 @@ def test_arabic_sar_amount_contradiction() -> None:
 
     assert result.contradiction is True
     assert result.unsupported_answer_values == [650.0]
+
+def test_matching_minutes_are_not_contradiction() -> None:
+    result = check_duration_consistency(
+        answer="Password reset must be completed within 15 minutes.",
+        evidence="Password reset must be completed within 15 minutes.",
+    )
+
+    assert result.contradiction is False
+
+
+def test_thirty_minutes_contradicts_fifteen_minutes() -> None:
+    result = check_duration_consistency(
+        answer="Password reset must be completed within 30 minutes.",
+        evidence="Password reset must be completed within 15 minutes.",
+    )
+
+    assert result.contradiction is True
+    assert len(result.unsupported_answer_values) == 1
+
+
+def test_one_hour_matches_sixty_minutes() -> None:
+    result = check_duration_consistency(
+        answer="The process takes 1 hour.",
+        evidence="The process takes 60 minutes.",
+    )
+
+    assert result.contradiction is False
