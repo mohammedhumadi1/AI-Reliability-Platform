@@ -1,4 +1,4 @@
-﻿import re
+import re
 from dataclasses import dataclass
 
 
@@ -79,6 +79,19 @@ ARABIC_DIGIT_TRANSLATION = str.maketrans(
 )
 
 DURATION_TOLERANCE_DAYS = 0.01
+MONEY_TOLERANCE = 0.01
+
+
+MONEY_UNIT_PATTERN = re.compile(
+    r"(?<!\w)"
+    r"(\d+(?:\.\d+)?)"
+    r"\s*"
+    r"(?:sar|riyal(?:s)?|"
+    r"\u0631\u064a\u0627\u0644"
+    r"(?:\s+\u0633\u0639\u0648\u062f\u064a)?)"
+    r"(?!\w)",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -149,6 +162,31 @@ def extract_durations_in_days(
     return durations
 
 
+def extract_monetary_values(
+    text: str,
+) -> list[float]:
+    normalized = normalize_text(text)
+
+    values = [
+        float(value)
+        for value in MONEY_UNIT_PATTERN.findall(
+            normalized
+        )
+    ]
+
+    return values
+
+
+def monetary_values_match(
+    first_value: float,
+    second_value: float,
+) -> bool:
+    return (
+        abs(first_value - second_value)
+        <= MONEY_TOLERANCE
+    )
+
+
 def values_match(
     first_value: float,
     second_value: float,
@@ -166,13 +204,54 @@ def check_duration_consistency(
     answer_values = extract_durations_in_days(answer)
     evidence_values = extract_durations_in_days(evidence)
 
+    answer_money = extract_monetary_values(
+        answer
+    )
+
+    evidence_money = extract_monetary_values(
+        evidence
+    )
+
+    unsupported_money = [
+        answer_value
+        for answer_value in answer_money
+        if not any(
+            monetary_values_match(
+                answer_value,
+                evidence_value,
+            )
+            for evidence_value in evidence_money
+        )
+    ]
+
+    if (
+        answer_money
+        and evidence_money
+        and unsupported_money
+    ):
+        return NumericConsistencyResult(
+            contradiction=True,
+            answer_values_in_days=answer_values,
+            evidence_values_in_days=evidence_values,
+            unsupported_answer_values=unsupported_money,
+            explanation=(
+                "Unsupported monetary values were found "
+                f"in the answer: {unsupported_money}. "
+                f"The evidence contains: "
+                f"{evidence_money}."
+            ),
+        )
+
     if not answer_values or not evidence_values:
         return NumericConsistencyResult(
             contradiction=False,
             answer_values_in_days=answer_values,
             evidence_values_in_days=evidence_values,
             unsupported_answer_values=[],
-            explanation="No comparable durations were found.",
+            explanation=(
+                "No contradictory comparable numeric "
+                "values were found."
+            ),
         )
 
     unsupported_answer_values = [

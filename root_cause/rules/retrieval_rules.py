@@ -103,17 +103,16 @@ def check_prompt_failure(
     relevancy_threshold: float = 0.5,
 ) -> Optional[dict]:
     """
-    Diagnose a prompt failure only when metric symptoms
-    are supported by direct evidence from the submitted
-    prompt.
+    Diagnose a prompt failure only when direct evidence
+    exists inside the submitted prompt and retrieval quality
+    is acceptable.
 
-    Low answer relevancy alone is not enough to establish
-    PROMPT_FAILURE.
+    Semantic answer relevancy is retained as supporting
+    information, but direct prompt evidence is the primary
+    signal because conflicting instructions may still produce
+    a topically relevant answer.
     """
     if context_precision < precision_threshold:
-        return None
-
-    if answer_relevancy >= relevancy_threshold:
         return None
 
     if not prompt_evidence:
@@ -160,11 +159,11 @@ def check_prompt_failure(
         "confidence": float(confidence),
         "explanation": (
             f"Context precision is acceptable "
-            f"({context_precision:.2f}) while answer "
-            f"relevancy is low "
-            f"({answer_relevancy:.2f}). Direct prompt "
-            f"evidence was also detected: "
-            f"{evidence_explanation}"
+            f"({context_precision:.2f}). Direct prompt "
+            f"evidence was detected: "
+            f"{evidence_explanation} "
+            f"Answer relevancy was "
+            f"{answer_relevancy:.2f}."
         ),
     }
 
