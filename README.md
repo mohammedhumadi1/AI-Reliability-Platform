@@ -63,6 +63,44 @@ uv run streamlit run dashboard/app.py --server.port 8501
 
 Dashboard: `http://localhost:8501`
 
+## Docker setup
+
+Requirements: Docker and Docker Compose.
+
+Copy the example env file and set a real Postgres password:
+
+```bash
+cp .env.docker.example .env
+# edit .env and replace CHANGE_ME
+```
+
+Build and start everything (Postgres, FastAPI, Streamlit):
+
+```bash
+docker compose build
+docker compose up -d
+docker compose ps
+```
+
+- The `api` container runs `alembic upgrade head` automatically before starting uvicorn, so the schema is always current.
+- FastAPI: `http://localhost:8002` (Swagger UI at `/docs`)
+- Streamlit dashboard: `http://localhost:8501`
+- Postgres data persists in the `postgres_data` volume, Chroma vectors persist in `chroma_data` — both survive `docker compose down` (use `docker compose down -v` to wipe them).
+- The dashboard container talks to the API via the `API_URL` environment variable (`http://api:8002` inside the Docker network); FastAPI talks to Postgres via `DATABASE_URL`, built from the Postgres credentials in your `.env`.
+
+Stop everything:
+
+```bash
+docker compose down
+```
+
+View logs:
+
+```bash
+docker compose logs -f api
+docker compose logs -f dashboard
+```
+
 ## Main API endpoints
 
 - `GET /health`

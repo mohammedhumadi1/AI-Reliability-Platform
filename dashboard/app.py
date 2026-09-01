@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from datetime import datetime
 
 import pandas as pd
@@ -25,7 +26,10 @@ from i18n import (
 )
 
 
-DEFAULT_API_URL = "http://127.0.0.1:8002"
+DEFAULT_API_URL = os.getenv(
+    "API_URL",
+    "http://127.0.0.1:8002",
+)
 
 
 st.set_page_config(
