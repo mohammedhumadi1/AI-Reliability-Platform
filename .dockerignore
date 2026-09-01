@@ -1,0 +1,33 @@
+# VCS / editor
+.git
+.github
+.vscode
+*.bak
+
+# Local Python state
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Secrets — never baked into the image
+.env
+.env.*
+!.env.example
+!.env.docker.example
+
+# Local runtime data (mounted as volumes instead)
+chroma_db/
+uploads/
+data/raw/
+/models/
+
+# Not needed at runtime: offline research/benchmark tooling
+# (pulls in torch/transformers/datasets via a separate uv dependency
+# group that Docker never installs) and dev-only assets
+benchmarks/
+benchmark_results/
+tests/
+docs/
+
+README.md
